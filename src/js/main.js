@@ -24,4 +24,5 @@ function openModal(){
 $(document).ready(function(){
 	mobileMenu();
 	openModal();
+	$('.hero--fixed').scrollToFixed();
 });

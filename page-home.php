@@ -16,7 +16,7 @@ $home_posts = get_posts( $home_args );
 
 ?>
 
-<div class="home__hero hero hero--wh pinned pinned--fixed wallpaper bg--black relative" data-background-options='{"source":"<?php echo $thumb_url; ?>"}'>
+<div class="home__hero hero hero--lg pinned pinned--fixed wallpaper bg--black relative" data-background-options='{"source":"<?php echo $thumb_url; ?>"}'>
 	<div class="centered centered__bottom">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white">
@@ -27,8 +27,8 @@ $home_posts = get_posts( $home_args );
 	</div>
 </div>
 
-<div style="position: relative; z-index:999">
-<div class="home__hero hero hero--wh wallpaper relative"></div>
+<div style="position: relative; z-index:99">
+<div class="home__hero hero hero--lg wallpaper relative"></div>
 
 <?php
 foreach($home_posts as $post): setup_postdata( $post );
@@ -37,7 +37,7 @@ $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'gallery-lg', true);
 $thumb_url = $thumb_url_array[0];
 ?>
 
-<div class="home__hero hero--md wallpaper bg--black relative" <?php if($thumb_id): ?>data-background-options='{"source":"<?php echo $thumb_url; ?>"}'<?php endif; ?>>
+<div class="home__hero hero--md wallpaper bg--black relative hero--fixed" <?php if($thumb_id): ?>data-background-options='{"source":"<?php echo $thumb_url; ?>"}'<?php endif; ?>>
 	<div class="centered centered__top">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white">

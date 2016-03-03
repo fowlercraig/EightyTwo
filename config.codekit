@@ -10066,6 +10066,60 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/src\/bower_components\/ScrollToFixed\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/bower_components\/ScrollToFixed\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/src\/bower_components\/ScrollToFixed\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/src\/bower_components\/ScrollToFixed\/jquery-scrolltofixed-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/bower_components\/ScrollToFixed\/jquery-scrolltofixed-min.js",
+		"outputAbbreviatedPath": "\/src\/bower_components\/ScrollToFixed\/min\/jquery-scrolltofixed-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/src\/bower_components\/ScrollToFixed\/jquery-scrolltofixed.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/bower_components\/ScrollToFixed\/jquery-scrolltofixed.js",
+		"outputAbbreviatedPath": "\/src\/bower_components\/ScrollToFixed\/min\/jquery-scrolltofixed-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/src\/bower_components\/ScrollToFixed\/README.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/bower_components\/ScrollToFixed\/README.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/src\/bower_components\/ScrollToFixed\/README.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
 	"\/src\/js\/main.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -10628,9 +10682,9 @@
 "manualImportLinks": {
 	},
 "projectAttributes": {
-	"bowerAbbreviatedPath": "",
-	"displayValue": "Wordpress-Base",
-	"displayValueWasSetByUser": 0,
+	"bowerAbbreviatedPath": "src",
+	"displayValue": "82",
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "pencil_yellow"
 	},
 "projectSettings": {
@@ -10788,7 +10842,7 @@
 	"coffeeMinifyOutput": 1,
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
-	"externalServerAddress": "http:\/\/commune.dev",
+	"externalServerAddress": "http:\/\/eightytwo.dev",
 	"externalServerPreviewPathAddition": "",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathEnabled": 1,

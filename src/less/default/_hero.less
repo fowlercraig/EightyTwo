@@ -83,4 +83,15 @@
     
   }
 
+  &--fixed {
+    z-index: 99;
+    position: relative;
+    box-shadow: 0 0  @spaced*2 @black25;
+    &.scroll-to-fixed {
+      &-fixed {
+        z-index: 49!important;
+      }
+    }
+  }
+
 }
