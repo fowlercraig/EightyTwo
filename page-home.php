@@ -37,7 +37,7 @@ $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'gallery-lg', true);
 $thumb_url = $thumb_url_array[0];
 ?>
 
-<div id="<?php echo seoString(get_the_title()); ?>" class="home__hero hero--md wallpaper bg--black relative" <?php if($thumb_id): ?>data-background-options='{"source":"<?php echo $thumb_url; ?>"}'<?php endif; ?>>
+<div id="<?php echo seoString(get_the_title()); ?>" class="home__hero hero wallpaper bg--black relative" <?php if($thumb_id): ?>data-background-options='{"source":"<?php echo $thumb_url; ?>"}'<?php endif; ?>>
 	<div class="centered centered__bottom">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white">
@@ -46,7 +46,7 @@ $thumb_url = $thumb_url_array[0];
 		</div>
 	</div>
 </div>
-<div class="home__hero hero--padded">
+<div class="home__hero hero--padded bg--darkGray">
 	<div class="fs-row">
 		<div class="fs-cell fs-all-full color--white">
 			<?php the_field('intro_copy'); ?>

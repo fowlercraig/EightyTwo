@@ -3881,6 +3881,9 @@ img.rounded {
 .bg--grey {
   background: #999999;
 }
+.bg--darkGray {
+  background: #262626;
+}
 .bg--bgGray {
   background: #F2F2F2;
 }
