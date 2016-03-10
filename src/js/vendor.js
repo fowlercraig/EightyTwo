@@ -12,3 +12,4 @@
 // @codekit-prepend "../bower_components/components-modernizr/modernizr.js"
 // @codekit-prepend "../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"
 // @codekit-prepend "../bower_components/ScrollToFixed/jquery-scrolltofixed-min.js"
+// @codekit-prepend "../bower_components/jQuery-One-Page-Nav/jquery.nav.js"

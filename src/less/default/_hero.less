@@ -64,6 +64,10 @@
     }
   }
 
+  &--padded {
+    padding: @spaced*3 0;
+  }
+
   &__bg {
   	&--covered {
   		background-size: cover;
@@ -87,9 +91,15 @@
     z-index: 99;
     position: relative;
     box-shadow: 0 0  @spaced*2 @black25;
+    .fs-background-container {
+      transition: opacity 500ms ease;
+    }
     &.scroll-to-fixed {
       &-fixed {
         z-index: 49!important;
+        .fs-background-container {
+          opacity: .5;
+        }
       }
     }
   }

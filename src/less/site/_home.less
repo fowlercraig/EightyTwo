@@ -1,0 +1,58 @@
+.home {
+
+  &__nav {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: fixed;
+    z-index: 199;
+    right: @spaced*1.5;
+    
+    &-button {
+      &.current {
+        a {
+          &:before {
+            background: @white;
+          }
+        }
+      }
+      a {
+        display: block;
+        height: 10px;
+        width: 10px;
+        padding: 5px;
+        position: relative;
+        box-sizing: content-box;
+        span {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: @spaced;
+          border-radius: 2px;
+          padding: 3px 6px;
+          opacity: 0;
+          transition: 300ms ease;
+        }
+        &:before {
+          content: '';
+          display: block;
+          height: 10px;
+          width: 10px;
+          background: @white25;
+          border-radius: 50%;
+          .center();
+          transition: 300ms ease;
+        }
+        &:hover {
+          &:before {
+            background: @white;
+          }
+          span {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+  }
+}

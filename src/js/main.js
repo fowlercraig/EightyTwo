@@ -25,4 +25,7 @@ $(document).ready(function(){
 	mobileMenu();
 	openModal();
 	$('.hero--fixed').scrollToFixed();
+	$('.home__nav').onePageNav({
+		currentClass: 'current'
+	});
 });

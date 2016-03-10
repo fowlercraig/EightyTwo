@@ -16,7 +16,7 @@ $home_posts = get_posts( $home_args );
 
 ?>
 
-<div class="home__hero hero hero--lg pinned pinned--fixed wallpaper bg--black relative" data-background-options='{"source":"<?php echo $thumb_url; ?>"}'>
+<div class="home__hero hero hero--lg pinned wallpaper bg--black relative" data-background-options='{"source":"<?php echo $thumb_url; ?>"}'>
 	<div class="centered centered__bottom">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white">
@@ -37,19 +37,19 @@ $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'gallery-lg', true);
 $thumb_url = $thumb_url_array[0];
 ?>
 
-<div class="home__hero hero--md wallpaper bg--black relative hero--fixed" <?php if($thumb_id): ?>data-background-options='{"source":"<?php echo $thumb_url; ?>"}'<?php endif; ?>>
-	<div class="centered centered__top">
+<div id="<?php echo seoString(get_the_title()); ?>" class="home__hero hero--md wallpaper bg--black relative" <?php if($thumb_id): ?>data-background-options='{"source":"<?php echo $thumb_url; ?>"}'<?php endif; ?>>
+	<div class="centered centered__bottom">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white">
 				<h3 class="title title--lg color--white"><?php the_title(); ?></h3>
 			</div>
 		</div>
 	</div>
-	<div class="centered centered__bottom">
-		<div class="fs-row">
-			<div class="fs-cell fs-all-full color--white">
-				<a href="<?php the_permalink(); ?>" class="btn btn--link accent">Jump In</a>
-			</div>
+</div>
+<div class="home__hero hero--padded">
+	<div class="fs-row">
+		<div class="fs-cell fs-all-full color--white">
+			<?php the_field('intro_copy'); ?>
 		</div>
 	</div>
 </div>
@@ -57,5 +57,17 @@ $thumb_url = $thumb_url_array[0];
 <?php endforeach; wp_reset_postdata(); ?>
 
 </div>
+
+<div class="home__nav">
+	<?php foreach($home_posts as $post): setup_postdata( $post ); ?>
+	<div class="home__nav-button">
+		<a class="accent accent--sm" href="#<?php echo seoString(get_the_title()); ?>">
+			<span class="bg--black color--white">
+				<?php the_title(); ?>
+			</span>
+		</a>
+	</div>
+	<?php endforeach; wp_reset_postdata(); ?>
+</div>	
 
 <?php get_footer(); ?>

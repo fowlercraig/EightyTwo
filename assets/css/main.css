@@ -3872,7 +3872,7 @@ img.rounded {
   width: 100%;
 }
 .bg--black {
-  background: #333;
+  background: #111;
 }
 .bg--white {
   background: #fff;
@@ -3885,7 +3885,7 @@ img.rounded {
   background: #F2F2F2;
 }
 .color--black {
-  color: #333;
+  color: #111;
 }
 .color--white {
   color: #fff;
@@ -3945,10 +3945,10 @@ img.rounded {
   z-index: 1;
 }
 .centered__bottom {
-  top: 65%;
+  top: 75%;
 }
 .centered__top {
-  top: 35%;
+  top: 25%;
 }
 *:link,
 *:visited,
@@ -4163,8 +4163,8 @@ form input[type=tel]--outlined,
 form input[type=url]--outlined,
 form textarea--outlined {
   background: transparent;
-  box-shadow: inset 0 0 0 1px #333;
-  color: #333;
+  box-shadow: inset 0 0 0 1px #111;
+  color: #111;
 }
 form input[type=text]--link,
 form input[type=email]--link,
@@ -4446,6 +4446,10 @@ table tr th {
 .accent {
   font-family: 'Karla', sans-serif;
 }
+.accent--sm {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
 button,
 input[type=submit],
 input[type=search],
@@ -4499,8 +4503,8 @@ input[type=button] {
 .button--outlined,
 .epm-submit-chimp--outlined {
   background: transparent;
-  box-shadow: inset 0 0 0 1px #333;
-  color: #333;
+  box-shadow: inset 0 0 0 1px #111;
+  color: #111;
 }
 .btn--link,
 .button--link,
@@ -4681,7 +4685,7 @@ input[type=button] {
 @media screen and (min-width: 740px) {
   .gform_wrapper {
     padding: 10px 0px 10px 17px;
-    box-shadow: 0 1px 4px rgba(51, 51, 51, 0.2);
+    box-shadow: 0 1px 4px rgba(17, 17, 17, 0.2);
   }
 }
 @media screen and (min-width: 980px) {
@@ -4815,6 +4819,9 @@ input[type=button] {
     height: 900px;
   }
 }
+.hero--padded {
+  padding: 75px 0;
+}
 .hero__bg--covered {
   background-size: cover;
   background-position: center center;
@@ -4824,8 +4831,15 @@ input[type=button] {
   position: relative;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
 }
+.hero--fixed .fs-background-container {
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
+}
 .hero--fixed.scroll-to-fixed-fixed {
   z-index: 49!important;
+}
+.hero--fixed.scroll-to-fixed-fixed .fs-background-container {
+  opacity: .5;
 }
 .modal {
   margin: auto;
@@ -4900,9 +4914,62 @@ input[type=button] {
 .widget-area .xoxo {
   padding-left: 0;
 }
+.home__nav {
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: fixed;
+  z-index: 199;
+  right: 37.5px;
+}
+.home__nav-button.current a:before {
+  background: #fff;
+}
+.home__nav-button a {
+  display: block;
+  height: 10px;
+  width: 10px;
+  padding: 5px;
+  position: relative;
+  box-sizing: content-box;
+}
+.home__nav-button a span {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 25px;
+  border-radius: 2px;
+  padding: 3px 6px;
+  opacity: 0;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.home__nav-button a:before {
+  content: '';
+  display: block;
+  height: 10px;
+  width: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.home__nav-button a:hover:before {
+  background: #fff;
+}
+.home__nav-button a:hover span {
+  opacity: 1;
+}
 #splash {
   color: rgba(255, 255, 255, 0.5);
-  background: #333;
+  background: #111;
   height: 100%;
   left: 0;
   position: absolute;
