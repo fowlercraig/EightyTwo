@@ -16,7 +16,7 @@ $home_posts = get_posts( $home_args );
 
 ?>
 
-<div class="home__hero hero hero--lg pinned wallpaper bg--black relative" data-background-options='{"source":"<?php echo $thumb_url; ?>"}'>
+<div id="home" class="home__hero hero hero--lg pinned wallpaper bg--black relative" data-background-options='{"source":"<?php echo $thumb_url; ?>"}'>
 	<div class="centered centered__bottom">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white">
@@ -41,7 +41,7 @@ $thumb_url = $thumb_url_array[0];
 	<div class="centered centered__bottom">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white">
-				<h3 class="title title--lg color--white"><?php the_title(); ?></h3>
+				<h3 class="title title--lg color--white"><span class="bg--black"><?php the_title(); ?></span></h3>
 			</div>
 		</div>
 	</div>
@@ -59,6 +59,13 @@ $thumb_url = $thumb_url_array[0];
 </div>
 
 <div class="home__nav">
+	<div class="home__nav-button">
+		<a class="accent accent--sm" href="#home">
+			<span class="bg--black color--white">
+				Home
+			</span>
+		</a>
+	</div>
 	<?php foreach($home_posts as $post): setup_postdata( $post ); ?>
 	<div class="home__nav-button">
 		<a class="accent accent--sm" href="#<?php echo seoString(get_the_title()); ?>">

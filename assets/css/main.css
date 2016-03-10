@@ -4914,6 +4914,10 @@ input[type=button] {
 .widget-area .xoxo {
   padding-left: 0;
 }
+.home__hero .title span {
+  padding-left: 8px;
+  padding-right: 8px;
+}
 .home__nav {
   right: 0;
   top: 50%;
@@ -4921,7 +4925,21 @@ input[type=button] {
           transform: translateY(-50%);
   position: fixed;
   z-index: 199;
-  right: 37.5px;
+}
+@media screen and (min-width: 300px) {
+  .home__nav {
+    right: 25px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .home__nav {
+    right: 37.5px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .home__nav {
+    right: 37.5px;
+  }
 }
 .home__nav-button.current a:before {
   background: #fff;

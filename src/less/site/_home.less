@@ -1,12 +1,30 @@
 .home {
 
+  &__hero {
+    .title {
+      span {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+  }
+
   &__nav {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
     position: fixed;
     z-index: 199;
-    right: @spaced*1.5;
+    @media @min {
+      right: @spaced;  
+    }
+    @media @tablet {
+      right: @spaced*1.5;
+    }
+    @media @desktop {
+      right: @spaced*1.5;
+    }
+    
     
     &-button {
       &.current {
