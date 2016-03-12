@@ -3950,6 +3950,9 @@ img.rounded {
 .centered__bottom {
   top: 75%;
 }
+.centered__bottomer {
+  top: 102%;
+}
 .centered__top {
   top: 25%;
 }
@@ -4442,8 +4445,8 @@ table tr th {
 }
 @media screen and (min-width: 740px) {
   .title--xl {
-    font-size: 72px;
-    font-size: 4.5rem;
+    font-size: 66px;
+    font-size: 4.125rem;
   }
 }
 .accent {
@@ -4747,19 +4750,22 @@ input[type=button] {
 #mobile-menu.fs-swap-active {
   display: block;
 }
+.hero {
+  background-size: cover;
+}
 @media screen and (min-width: 300px) {
   .hero {
-    height: 400px;
+    height: 300px;
   }
 }
 @media screen and (min-width: 740px) {
   .hero {
-    height: 500px;
+    height: 400px;
   }
 }
 @media screen and (min-width: 980px) {
   .hero {
-    height: 600px;
+    height: 500px;
   }
 }
 @media screen and (min-width: 300px) {
@@ -4917,9 +4923,31 @@ input[type=button] {
 .widget-area .xoxo {
   padding-left: 0;
 }
+body,
+html {
+  background: #111;
+}
+#wrapper {
+  max-width: 1600px;
+  margin: auto;
+  background: #111;
+  position: relative;
+}
 .home__hero .title span {
   padding-left: 8px;
   padding-right: 8px;
+}
+.home__hero h1,
+.home__hero h2,
+.home__hero h3,
+.home__hero h4,
+.home__hero h5 {
+  color: inherit;
+}
+.home__hero-copy h3 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.2;
 }
 .home__nav {
   right: 0;

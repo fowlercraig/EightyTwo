@@ -27,7 +27,7 @@
 <body class="fs-grid">
 <div id="wrapper" class="bg--black">
 
-<header id="header" class="header header--lg pinned pinned--top pinned--fixed" style="z-index: 100">
+<header id="header" class="header header--lg pinned pinned--top" style="z-index: 100">
   <div class="fs-row">
     <menu id="header-main" class="fs-cell fs-lg-4 fs-md-2 fs-sm-2">
       <a href="/" id="header--logo" class="btn btn--logo btn--nav btn_first color--white"><?php bloginfo('name' );?></a>

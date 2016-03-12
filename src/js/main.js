@@ -28,4 +28,8 @@ $(document).ready(function(){
 	$('.home__nav').onePageNav({
 		currentClass: 'current'
 	});
+	$.stellar({
+		horizontalScrolling: false,
+		verticalOffset: 40
+	});
 });

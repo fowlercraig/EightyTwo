@@ -1,3 +1,14 @@
+body,html {
+  background: @black;
+}
+
+#wrapper {
+  max-width: 1600px;
+  margin: auto;
+  background: @black;
+  position: relative;
+}
+
 .home {
 
   &__hero {
@@ -5,6 +16,15 @@
       span {
         padding-left: 8px;
         padding-right: 8px;
+      }
+    }
+    h1,h2,h3,h4,h5 {
+      color: inherit;
+    }
+    &-copy {
+      h3 {
+        .font_size(36);
+        line-height: 1.2;
       }
     }
   }

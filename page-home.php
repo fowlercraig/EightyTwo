@@ -9,14 +9,16 @@ $home_args = array(
 	'posts_per_page' => -1,
 	'post__in'			 => array(10,14,4,8),
 	'post_type'      => 'page',
-	'order'          => 'DESC'
+	'order'          => 'ASC',
+	'orderby'				 => 'menu_order'
 );
 
 $home_posts = get_posts( $home_args );
 
 ?>
 
-<div id="home" class="home__hero hero hero--lg pinned wallpaper bg--black relative" data-background-options='{"source":"<?php echo $thumb_url; ?>"}'>
+
+<div id="home" class="home__hero hero hero--lg pinned wallpaper bg--black relative" style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75">
 	<div class="centered centered__bottom">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white">
@@ -35,24 +37,43 @@ foreach($home_posts as $post): setup_postdata( $post );
 $thumb_id = get_post_thumbnail_id();
 $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'gallery-lg', true);
 $thumb_url = $thumb_url_array[0];
+$seoTitle = seoString(get_the_title());
+
+if( $seoTitle == 'location' ):
 ?>
 
-<div id="<?php echo seoString(get_the_title()); ?>" class="home__hero hero wallpaper bg--black relative" <?php if($thumb_id): ?>data-background-options='{"source":"<?php echo $thumb_url; ?>"}'<?php endif; ?>>
-	<div class="centered centered__bottom">
+<div id="<?php echo $seoTitle; ?>" class="home__hero hero  bg--white relative">
+	<div class="centered">
+		<div class="fs-row">
+			<div class="fs-cell fs-all-full color--black">
+				<div class="home__hero-copy">
+					<?php the_field('intro_copy'); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<?php else: ?>
+
+	<div id="<?php echo seoString(get_the_title()); ?>" class="home__hero hero wallpaper--parallax bg--black relative" <?php if($thumb_id): ?>style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75"<?php endif; ?>>
+	<div class="centered centered__bottomer">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white">
-				<h3 class="title title--lg color--white"><span class="bg--black"><?php the_title(); ?></span></h3>
+				<h2 class="title title--xl color--white"><span class="bg--black"><?php the_title(); ?></span></h2>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="home__hero hero--padded bg--darkGray">
 	<div class="fs-row">
-		<div class="fs-cell fs-all-full color--white">
+		<div class="home__hero-copy fs-cell fs-lg-6 fs-md-5 fs-sm-3 color--white">
 			<?php the_field('intro_copy'); ?>
 		</div>
 	</div>
 </div>
+
+<?php endif; ?>
 
 <?php endforeach; wp_reset_postdata(); ?>
 

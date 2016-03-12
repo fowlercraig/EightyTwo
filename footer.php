@@ -1,7 +1,7 @@
 </div>
 </div><!--Wrapper-->
 
-<footer id="footer" class="bg--white">
+<footer id="footer" class="bg--black">
   <div class="fs-row">
     <div class='fs-cell fs-lg-11 fs-md-6 fs-sm-3'>
       <span class="btn btn--nav btn__first">Copyright <?php bloginfo('name' );?> <?php echo date('Y'); ?></span>
