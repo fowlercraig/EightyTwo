@@ -3877,6 +3877,9 @@ img.rounded {
 .bg--white {
   background: #fff;
 }
+.bg--white--25 {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+}
 .bg--gray,
 .bg--grey {
   background: #999999;
@@ -3892,6 +3895,12 @@ img.rounded {
 }
 .color--white {
   color: #fff;
+}
+.color--white--50 {
+  color: rgba(255, 255, 255, 0.5);
+}
+.color--white--25 {
+  color: rgba(255, 255, 255, 0.25);
 }
 .color--gray {
   color: #666666;
@@ -3994,7 +4003,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica' sans-serif;
   font-weight: 700;
   color: #404040;
   line-height: inherit;
@@ -4129,7 +4138,7 @@ form textarea {
   width: 100%;
   margin: 0 0 10px;
   background: #F2F2F2;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica' sans-serif;
   font-weight: 700;
   cursor: pointer;
   display: inline-block;
@@ -4197,6 +4206,7 @@ form textarea--nav {
   height: 70px;
   line-height: 70px;
   background: transparent;
+  padding: 0;
 }
 @media screen and (min-width: 300px) {
   form input[type=text]--nav,
@@ -4205,7 +4215,7 @@ form textarea--nav {
   form input[type=tel]--nav,
   form input[type=url]--nav,
   form textarea--nav {
-    padding: 0 5px;
+    margin: 0 5px;
   }
 }
 @media screen and (min-width: 740px) {
@@ -4215,7 +4225,7 @@ form textarea--nav {
   form input[type=tel]--nav,
   form input[type=url]--nav,
   form textarea--nav {
-    padding: 0 10px;
+    margin: 0 10px;
   }
 }
 @media screen and (min-width: 980px) {
@@ -4225,7 +4235,7 @@ form textarea--nav {
   form input[type=tel]--nav,
   form input[type=url]--nav,
   form textarea--nav {
-    padding: 0 15px;
+    margin: 0 15px;
   }
 }
 form input[type=text]--logo,
@@ -4238,6 +4248,11 @@ form textarea--logo {
   font-weight: 400;
   height: 70px;
   line-height: 70px;
+  background-image: url('/assets/img/82logo.svg');
+  background-size: contain;
+  width: 100%;
+  background-position: center left;
+  background-repeat: no-repeat;
 }
 form input[type=text]--logo:hover,
 form input[type=email]--logo:hover,
@@ -4245,7 +4260,6 @@ form input[type=password]--logo:hover,
 form input[type=tel]--logo:hover,
 form input[type=url]--logo:hover,
 form textarea--logo:hover {
-  background: transparent;
   text-decoration: none;
 }
 form input[type=text]--hamburg,
@@ -4374,7 +4388,7 @@ select {
   -moz-appearance: none;
        appearance: none;
   -webkit-appearance: none;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica' sans-serif;
   font-weight: 700;
   cursor: pointer;
   display: inline-block;
@@ -4387,9 +4401,10 @@ select {
   font-size: 15px;
   font-size: 0.9375rem;
   border-radius: 2px;
-  border: 1px solid #e5e5e5;
+  border: 0;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
   padding-right: 2.5em;
-  background: url('/assets/img/icon--down.svg') center right 0.75em no-repeat;
+  background: url('/assets/img/iconwhite--down.svg') center right 0.75em no-repeat;
   background-size: 10px auto;
   min-width: 150px;
 }
@@ -4422,6 +4437,10 @@ table tr th {
 table tr th {
   text-align: center;
 }
+.title {
+  font-family: 'Helvetica Neue', 'Helvetica' sans-serif;
+  font-weight: 700;
+}
 .title--bold {
   font-weight: bold;
 }
@@ -4450,7 +4469,7 @@ table tr th {
   }
 }
 .accent {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica' sans-serif;
 }
 .accent--sm {
   font-size: 13px;
@@ -4460,7 +4479,7 @@ button,
 input[type=submit],
 input[type=search],
 input[type=button] {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica' sans-serif;
   font-weight: 700;
   cursor: pointer;
   display: inline-block;
@@ -4479,7 +4498,7 @@ input[type=button] {
 .btn,
 .button,
 .epm-submit-chimp {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica' sans-serif;
   font-weight: 700;
   cursor: pointer;
   display: inline-block;
@@ -4531,26 +4550,27 @@ input[type=button] {
   height: 70px;
   line-height: 70px;
   background: transparent;
+  padding: 0;
 }
 @media screen and (min-width: 300px) {
   .btn--nav,
   .button--nav,
   .epm-submit-chimp--nav {
-    padding: 0 5px;
+    margin: 0 5px;
   }
 }
 @media screen and (min-width: 740px) {
   .btn--nav,
   .button--nav,
   .epm-submit-chimp--nav {
-    padding: 0 10px;
+    margin: 0 10px;
   }
 }
 @media screen and (min-width: 980px) {
   .btn--nav,
   .button--nav,
   .epm-submit-chimp--nav {
-    padding: 0 15px;
+    margin: 0 15px;
   }
 }
 .btn--logo,
@@ -4560,11 +4580,15 @@ input[type=button] {
   font-weight: 400;
   height: 70px;
   line-height: 70px;
+  background-image: url('/assets/img/82logo.svg');
+  background-size: contain;
+  width: 100%;
+  background-position: center left;
+  background-repeat: no-repeat;
 }
 .btn--logo:hover,
 .button--logo:hover,
 .epm-submit-chimp--logo:hover {
-  background: transparent;
   text-decoration: none;
 }
 .btn--hamburg,
@@ -4909,8 +4933,52 @@ input[type=button] {
 .pinned__bottom {
   bottom: 0;
 }
+@media screen and (min-width: 980px) {
+  .header {
+    top: 25px;
+  }
+}
 .header--lg {
   padding: 25px 0;
+}
+.header .menu {
+  display: block;
+  float: right;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+}
+.header .menu-item {
+  display: inline-block;
+  margin-bottom: -2px;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.header .menu-item a {
+  border-radius: 0;
+  font-weight: bold;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+  border-bottom: 2px solid transparent;
+}
+.header .menu-item:before {
+  display: none;
+}
+.header .menu-item:first-child {
+  margin-left: 0;
+}
+.header .menu-item:first-child a {
+  margin-left: 0;
+}
+.header .menu-item:last-child {
+  margin-right: 0;
+}
+.header .menu-item:last-child a {
+  margin-right: 0;
+}
+.header .menu-item.active a,
+.header .menu-item:hover a {
+  border-bottom: 2px solid #fff;
 }
 .hentry__content {
   margin-bottom: 75px;
@@ -4925,13 +4993,14 @@ input[type=button] {
 }
 body,
 html {
-  background: #111;
+  background: rgba(17, 17, 17, 0.7);
 }
 #wrapper {
   max-width: 1600px;
   margin: auto;
   background: #111;
   position: relative;
+  box-shadow: 0 0 75px rgba(0, 0, 0, 0.25);
 }
 .home__hero .title span {
   padding-left: 8px;
@@ -5015,6 +5084,83 @@ html {
 }
 .home__nav-button a:hover span {
   opacity: 1;
+}
+.games__item {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  margin-bottom: 25px;
+}
+.games__item.show {
+  opacity: 1;
+}
+.games__item.hide {
+  opacity: .25;
+}
+@media screen and (min-width: 300px) {
+  .games__item > div {
+    min-height: 80px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .games__item > div {
+    min-height: 80px;
+  }
+}
+.games__item-info {
+  display: inline-block;
+  height: 50px;
+  padding-left: 10px;
+}
+.games__item-image {
+  height: 50px;
+  width: 50px;
+  background: rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  border-radius: 50%;
+  float: left;
+}
+.games__item-type {
+  position: relative;
+}
+.games__item-type span {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform-style: preserve-3D;
+          transform-style: preserve-3D;
+}
+.games__item-type:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  right: 0;
+}
+.drinks-menu ul {
+  margin: 0;
+  padding: 0;
+}
+.drinks-menu ul li {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.drinks-menu ul li strong {
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: 'Helvetica Neue', 'Helvetica' sans-serif;
+  font-weight: 700;
+}
+.drinks-menu ul li:before {
+  display: none;
 }
 #splash {
   color: rgba(255, 255, 255, 0.5);

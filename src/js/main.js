@@ -19,7 +19,22 @@ function openModal(){
 		e.preventDefault();
 		$.magnificPopup.close();
 	});
+	$('.open--image').magnificPopup({
+		type: 'image',
+		//preloader: false,
+		//modal: true
+	});
 }
+
+$('input#search').quicksearch('.games__item',{
+	noResults: '#noresults',
+	//show: function () {
+	//   $(this).addClass('show');
+	//},
+	//hide: function () {
+	//   $(this).removeClass('show');
+	//}
+});
 
 $(document).ready(function(){
 	mobileMenu();

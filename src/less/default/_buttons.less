@@ -69,14 +69,15 @@ input[type=button] {
     height: @height_nav;
     line-height: @height_nav;
     background: transparent;
+    padding: 0;
     @media @min {
-      padding: 0 5px;
+      margin: 0 5px;
     }
     @media @tablet {
-      padding: 0 10px;
+      margin: 0 10px;
     }
     @media @desktop {
-      padding: 0 15px;
+      margin: 0 15px;
     }
   }
 
@@ -85,8 +86,13 @@ input[type=button] {
     font-weight: 400;
     height: @height_nav;
     line-height: @height_nav;
+    background-image: url('/assets/img/82logo.svg');
+    background-size: contain;
+    width: 100%;
+    background-position: center left;
+    background-repeat: no-repeat; 
     &:hover {
-      background: transparent;
+      //background: transparent;
       text-decoration: none;
     }
   }

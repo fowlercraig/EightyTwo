@@ -1,4 +1,8 @@
 .header {
+
+  @media @desktop {
+    top: @spaced;
+  }
   
   &__logo {}
   
@@ -14,6 +18,46 @@
   
   &--lg {
   	padding: @spaced 0;
+  }
+
+  .menu {
+    display: block;
+    float: right;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid @white25;
+
+    &-item {
+      display: inline-block;
+      margin-bottom: -2px;
+      transition: 300ms ease;
+      a {
+        border-radius: 0;
+        font-weight: bold;
+        transition: 300ms ease;
+        border-bottom: 2px solid transparent;
+      }
+      &:before {
+        display: none;
+      }
+      &:first-child {
+        margin-left: 0;
+        a {
+          margin-left: 0;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+        a {
+          margin-right: 0;
+        }
+      }
+      &.active, &:hover {
+        a {
+          border-bottom: 2px solid @white;
+        }
+      }
+    }
   }
   
 }

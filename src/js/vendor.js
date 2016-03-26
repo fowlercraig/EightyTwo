@@ -14,3 +14,5 @@
 // @codekit-prepend "../bower_components/ScrollToFixed/jquery-scrolltofixed-min.js"
 // @codekit-prepend "../bower_components/jQuery-One-Page-Nav/jquery.nav.js"
 // @codekit-prepend "../bower_components/jquery.stellar/jquery.stellar.min.js"
+// @codekit-prepend "../bower_components/search/jquery.quicksearch.js"
+// @codekit-prepend "../bower_components/instafeed/instafeed.js"

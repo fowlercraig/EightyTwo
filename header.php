@@ -24,19 +24,22 @@
 
 </head>
 
-<body class="fs-grid">
+<body class="fs-grid fs-grid-fluid" class="bg--white">
 <div id="wrapper" class="bg--black">
-
+<?php if(is_front_page()):?>
 <header id="header" class="header header--lg pinned pinned--top" style="z-index: 100">
+<?php else: ?>
+<header id="header" class="header header--lg" style="z-index: 100">
+<?php endif; ?>
   <div class="fs-row">
     <menu id="header-main" class="fs-cell fs-lg-4 fs-md-2 fs-sm-2">
-      <a href="/" id="header--logo" class="btn btn--logo btn--nav btn_first color--white"><?php bloginfo('name' );?></a>
+      <a href="/" id="header--logo" class="btn btn--logo btn--nav btn_first color--white">&nbsp;</a>
     </menu>
     <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-hide fs-sm-1 text-right">
       <a data-swap-target="#mobile-menu" class="mobile-toggle btn btn--hamburg btn--hamburg__white btn--nav btn_first btn_last">&nbsp;</a>
     </menu>
     <menu id="header-navigation" class="fs-cell fs-lg-8 fs-md-4 fs-sm-hide text-right color--white">
-      <?php echo strip_tags(wp_nav_menu( $mainMenu ), '<a>' ); ?>
+      <?php echo wp_nav_menu( $mainMenu ); ?>
     </menu>
   </div>
 </header>
