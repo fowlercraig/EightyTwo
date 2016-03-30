@@ -107,7 +107,7 @@ $(document).ready(function() {
 
 function headHesive(){
 	var options = {
-	    offset: '.hentry__header',
+	    offset: 200,
 	    classes: {
 	        clone:   'header--clone',
 	        stick:   'header--stick',
@@ -129,7 +129,6 @@ $(document).ready(function(){
 	});
 	$.stellar({
 		horizontalScrolling: false,
-		verticalOffset: 40,
-		positionProperty: 'transform'
+		verticalOffset: 40
 	});
 });
