@@ -1,84 +1,74 @@
 <?php Themewrangler::setup_page();get_header(/***Template Name: Location */); ?>
 
 <article <?php post_class(); ?>>
-	<?php get_template_part('parts/page', 'header' ); ?>
-	<div style="position: relative; z-index:99">
-		<div class="hentry__content">
-			<div class="fs-row">
-				<div class="fs-cell fs-lg-8 fs-md-5 fs-sm-3 fs-centered">
-					<?php the_post(); the_content(); ?>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php 
+
+	$thumb_id = get_post_thumbnail_id();
+	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'original', true);
+	$thumb_url = $thumb_url_array[0];
+
+	?>
+
+	<header class="hentry__header">
+	  <div class="hero hero--md hero--overlay relative bg--black" style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75">
+	    <div class="centered">
+	      <div class="fs-row">
+	        <div class='fs-cell fs-xl-7 fs-lg-8 fs-md-6 fs-sm-3 color--white'>
+	          <h3><span><?php echo get_the_content(); ?></span></h3>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</header>
+
+	<script>
+	  $(document).ready(function(){
+	    $( ".hentry__header h3" ).wrapInner( "<span></span>");  
+	    $( ".hero h3" ).wrapInner( "<span></span>");  
+	  });
+	</script>
+
 </article>
 
-<div class="games-wrapper">
-	<div class="fs-row">
-		<div class="fs-cell fs-xl-half fs-lg-half fs-md-half fs-sm-3">
-			<div class="fs-row">
-				<select class="fs-cell fs-all-half">
-					<option>Filter</option>
-					<option>Arcade</option>
-					<option>Pinball</option>
-					<option>Console</option>
-				</select>
-				<select class="fs-cell fs-all-half">
-					<option>Sort</option>
-					<option>Alphabetical A &rarr; Z</option>
-					<option>Alphabetical Z &rarr; A</option>
-				</select>
+<div class="hero map relative">
+	<div class="centered centered--full">
+		<div class="fs-row">
+			<div class="fs-cell fs-full-all">
+				<?php the_field('intro_copy'); ?>
 			</div>
 		</div>
-		<div class="fs-cell fs-lg-4 fs-md-2 fs-sm-3 fs-right">
-			<form><input type="text" placeholder="Search" id="search" /></form>
-		</div>
-		<hr class="invisible fs-cell fs-all-full">
-
-<?php $games = get_field('games'); ?>
-<?php foreach($games as $game): ?>
-
-		<div class="games__item fs-cell fs-xl-3 fs-lg-4 fs-md-half fs-sm-3">
-			<div class="games__item-type fs-cell fs-lg-2 fs-md-1 fs-sm-1 fs-contained relative">
-				<span class="accent accent--sm color--white"><?php echo strtoupper($game['type']); ?></span>
-			</div>
-			<div class="games__item-content fs-cell fs-lg-10 fs-md-5 fs-sm-2 fs-contained relative">
-				<div class="centered wrapper">
-					<div class="games__item-image"></div>
-					<div class="games__item-info">
-						<span class="title title--sm color--white"><?php echo $game['name']; ?></span><br>
-						<span class="title title--sm color--white--50"><?php echo $game['manufacturer']; ?></span>
-						<span class="title title--sm color--white--50"><?php echo $game['year']; ?></span>
-					</div>
-				</div>
-			</div>
-		</div>
-
-<?php endforeach; ?>
-
 	</div>
+	<div id="gmap" class="covered"></div>
 </div>
 
 <hr class="invisible">
-<div class="carousel">
 
-<?php $features = get_field('featured'); ?>
-<?php foreach($features as $game): ?>
-
-	<div class="carousel__slide relative home__hero hero--overlay hero--sm wallpaper relative bg--gray" data-background-options='{"source":"<?php echo $game['image']['sizes']['gallery-lg']; ?>"}'>
-		<div class="centered centered--full">
-			<div class="fs-row">
-				<div class="fs-cell fs-lg-half fs-md-full fs-sm-3">
-					<span class="accent accent--md color--white">Featured Game</span><br>
-					<span class="title title--lg color--white"><?php echo $game['name']; ?></span>
-					<div class="color--white"><?php echo $game['description']; ?></div>
-				</div>
+<div class="fs-row">
+	<div class="fs-cell fs-lg-8 fs-md-full fs-sm-3">
+		<div class="fs-row">
+			<div class="fs-cell fs-all-half fs-sm-full">
+				<span class="title title--md color--white">From the 101 Fwy</span><br><br>
+				<p>Alameda Ave. south to E. 2nd St. turn left. Right on Rose Ave. Right on East 3rd. EightyTwo is on the left at the end of the block where East 3rd hits 4th Place.</p>
+			</div>
+			<div class="fs-cell fs-all-half fs-sm-full">
+				<span class="title title--md color--white">From the 10 Fwy</span><br><br>
+				<p>Exit Santa Fe Ave. North. Go 1 mile to east to 3rd Street, turn left. Go straight until you hit 4th place. EightyTwo is on the left.</p>
+			</div>
+			<hr class="fs-cell fs-all-full invisible compact">
+			<div class="fs-cell fs-all-half fs-sm-full">
+				<span class="title title--md color--white">The parking situation</span><br><br>
+				<p>PAY LOTS: There are an abundance of lots in the area, both on East 3rd and Traction.</p>
+				<p>VALET: East 3rd in front of Zip sushi and Wurstcüche.</p>
+			</div>
+			<div class="fs-cell fs-all-half fs-sm-full">
+				<span class="title title--md color--white">&nbsp;</span><br><br>
+				<p>NOT DRIVING — EightyTwo is located 2 blocks south of the Little Tokyo / Arts District Gold Line stop.  We also have ample short and long-term bike storage.</p>
 			</div>
 		</div>
 	</div>
-
-<?php endforeach; ?>
-
 </div>
+
+<br>
+<br>
 
 <?php get_footer(); ?>

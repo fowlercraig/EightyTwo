@@ -1,5 +1,5 @@
 @height_default: 40px;
-@height_nav:     70px;
+@height_nav:     60px;
 
 .animated(){
   &:active {
@@ -66,31 +66,51 @@ input[type=button] {
   &--nav {
     margin-bottom: 0;
     font-weight: 400;
-    height: @height_nav;
-    line-height: @height_nav;
     background: transparent;
     padding: 0;
     @media @min {
       margin: 0 5px;
+      height: @height_nav*.5;
+      line-height: @height_nav*.5;  
     }
     @media @tablet {
       margin: 0 10px;
+      height: @height_nav;
+      line-height: @height_nav;  
     }
     @media @desktop {
       margin: 0 15px;
+      height: @height_nav;
+      line-height: @height_nav;  
     }
   }
 
   &--logo {
     background: transparent;
     font-weight: 400;
-    height: @height_nav;
-    line-height: @height_nav;
     background-image: url('/assets/img/82logo.svg');
     background-size: contain;
     width: 100%;
     background-position: center left;
     background-repeat: no-repeat; 
+    text-align: left;
+    position: relative;
+    @media @min {
+      padding-left: @height_nav*.5 + @spaced!important;
+    }
+    @media @tablet {
+      padding-left: @height_nav+@spaced!important;
+    }
+    @media @desktop {
+      padding-left: @height_nav+@spaced!important;
+    }
+    span {
+      .font_size(24);
+      color: @textGray;
+      position: absolute;
+      bottom: 0;
+      line-height: 1;
+    }
     &:hover {
       //background: transparent;
       text-decoration: none;
@@ -160,10 +180,20 @@ input[type=button] {
 
   &__first {
     padding-left: 0;
+    margin-left: 0;
   }
 
   &__last {
     padding-right: 0;
+    margin-right: 0;
+  }
+
+  &__icon {
+    margin: 0;
+    &:before {
+      position: relative;
+      top: .125em;
+    }
   }
 
   &__full {

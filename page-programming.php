@@ -13,7 +13,20 @@
 	</div>
 </article>
 
+<div id="instafeed--single-wrapper"><div class="fs-row" id="instafeed--single"></div></div>
+
+<hr class="divider divider--dark">
+
+<div class="fs-row">
+	<div class="fs-cell fs-all-full">
+		<span class="title title--md color--white">Past Events</span>
+	</div>
+</div>
+
+<br>
+
 <div class="fs-row" id="instafeed"></div>
+
 <div class="fs-row">
 	<div class="fs-cell fs-all-full fs-centered">
 		<div class="text-center">
@@ -23,20 +36,45 @@
 </div>
 
 <script type="text/javascript">
+
 	$(document).ready(function () {
 		var loadButton = document.getElementById('load-more');
-		var feed = new Instafeed({
+
+		var smallFeed = new Instafeed({
 			get: 'user',
 			userId: '391656327',
+			target: 'instafeed--single',
+			limit: 1,
 			clientId: '92edd37c66a44760a6e11f658e4ec473',
 			accessToken: '3031273.1677ed0.7433495798e14df3b01c5ccdc1a160a6',
 			resolution: 'standard_resolution',
-			template: '<div class="fs-cell fs-lg-3 fs-md-2 fs-sm-half"><a class="open--image" href="{{link}}"><img src="{{image}}" class="img-responsive" /></a><hr class="invisible compact" /></div>',
+			template: '<div class="featured fs-cell fs-lg-third fs-md-half fs-sm-half"><a class="open--image" href="{{image}}"><img src="{{image}}" class="img-responsive" /></a></div><div class="featured-caption fs-cell fs-lg-third fs-md-half fs-sm-half"><span class="title title--md">The Latest Event</span>{{caption}}</div>',
+			after: function() {
+				$('.open--image').magnificPopup({
+					type: 'image',
+					preloader: false,
+				});
+		  },
+		});
+
+		var feed = new Instafeed({
+			get: 'user',
+			userId: '391656327',
+			limit: 13,
+			clientId: '92edd37c66a44760a6e11f658e4ec473',
+			accessToken: '3031273.1677ed0.7433495798e14df3b01c5ccdc1a160a6',
+			resolution: 'standard_resolution',
+			template: '<div class="fs-cell fs-lg-3 fs-md-2 fs-sm-half"><a class="open--image" href="{{image}}"><img src="{{image}}" class="img-responsive" /></a><hr class="invisible compact" /></div>',
 			after: function() {
 		    // disable button if no more results to load
 		    if (!this.hasNext()) {
 		      loadButton.setAttribute('disabled', 'disabled');
 		    }
+				$('.open--image').magnificPopup({
+					type: 'image',
+					preloader: false,
+					//modal: true
+				});
 		  },
 		});
 
@@ -45,7 +83,9 @@
 		  feed.next();
 		});
 		feed.run();
+		smallFeed.run();
 	});
+
 </script>
 
 

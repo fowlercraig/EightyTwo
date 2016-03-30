@@ -1,5 +1,5 @@
 body,html {
-  background: fade(@black, 70%);
+  background: lighten(@black, 10%);
 }
 
 #wrapper {
@@ -12,12 +12,27 @@ body,html {
 
 .home {
 
+  &__title {
+    a {
+      transition: 300ms ease;
+      padding: 0 10px;
+      margin-left: -10px;
+      &:hover {
+        color: @black;
+        background: @white;
+      }
+    }
+  }
+
   &__hero {
     .title {
       span {
         padding-left: 8px;
         padding-right: 8px;
       }
+    }
+    p {
+      color: @gray;
     }
     h1,h2,h3,h4,h5 {
       color: inherit;

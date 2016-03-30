@@ -3,8 +3,9 @@
 
   }
   &__item {
-    box-shadow: inset 0 0 0 1px @white25;
+    background: fade(@white, 8%);
     margin-bottom: @spaced;
+    border-radius: 4px;a
     &.show {
       opacity: 1;
     }
@@ -21,16 +22,30 @@
     }
     &-info {
       display: inline-block;
+      line-height: 1.1;
       height: 50px;
       padding-left: 10px;
+      .title {
+        font-weight: 400;
+        &--main {
+          font-weight: bold;
+          text-transform: lowercase;
+        }
+        &--type {
+          color: @white25;
+          .font_size(13);
+        }
+      }
     }
     &-image {
       height: 50px;
       width: 50px;
-      background: @white25;
+      //background: @white25;
       display: inline-block;
       border-radius: 50%;
       float: left;
+      background-size: cover;
+      background-position: center center;
     }
     &-type {
       position: relative;
@@ -49,7 +64,7 @@
         top: 0;
         height: 100%;
         width: 1px;
-        background: @white25;
+        background: @black;
         right: 0;
       }
     }

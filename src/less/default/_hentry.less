@@ -8,6 +8,40 @@
   	margin-bottom: @spaced*3;
   	.font_size(18);
   }
+
+  &__header {
+    h1,h2,h3,h4,h5 {
+      color: @white;
+      line-height: 1.2;
+      span {
+        background: @black;
+        box-shadow: 0 0 @spaced @black50;
+      }
+    }
+    h3 {
+      @media @min {
+        .font_size(32);
+      }
+      @media @tablet {
+        .font_size(48);
+      }
+      @media @desktop {
+        .font_size(58);  
+      }
+      
+    }
+    p {
+      @media @min {
+        .font_size(15);
+      }
+      @media @tablet {
+        .font_size(20);
+      }
+      @media @desktop {
+        .font_size(20);
+      }
+    }
+  }
   
   &__footer{}
   

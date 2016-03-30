@@ -18,19 +18,16 @@ $home_posts = get_posts( $home_args );
 ?>
 
 
-<div id="home" class="home__hero hero hero--lg pinned wallpaper bg--black relative" style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75">
+<div id="home" class="home__hero hero hero--overlay hero--lg bg--black relative" style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75">
 	<div class="centered centered__bottom">
 		<div class="fs-row">
-			<div class="fs-cell fs-all-full color--white">
-				<h3 class="title title--xl color--white">EightyTwo LA</h3>
-				<a href="#" class="btn btn--link accent">View Case Study</a>
+			<div class="fs-cell fs-lg-8 fs-md-full fs-sm-full color--white">
+				<h3 class="title title--lg color--white"><?php echo get_the_content(); ?></h3>
+				<a href="#location" class="ss-gizmo ss-navigatedown color--white size--lg"></a>
 			</div>
 		</div>
 	</div>
 </div>
-
-<div style="position: relative; z-index:99">
-<div class="home__hero hero hero--lg wallpaper relative"></div>
 
 <?php
 foreach($home_posts as $post): setup_postdata( $post );
@@ -52,6 +49,7 @@ if( $seoTitle == 'location' ):
 			</div>
 		</div>
 	</div>
+	<div id="gmap" class="covered"></div>
 </div>
 
 <?php else: ?>
@@ -60,7 +58,7 @@ if( $seoTitle == 'location' ):
 	<div class="centered centered__bottomer">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white">
-				<h2 class="title title--xl color--white"><span class="bg--black"><?php the_title(); ?></span></h2>
+				<h2 class="home__title title title--xl color--white"><a href="<?php the_permalink(); ?>" class="bg--black"><?php the_title(); ?></a></h2>
 			</div>
 		</div>
 	</div>

@@ -40,7 +40,7 @@
 @white50:     rgba(255, 255, 255, 0.5);
 @white75:     rgba(255, 255, 255, 0.75);
 
-@black:       #111;
+@black:       #000;
 @white:       #fff;
 
 @spaced:      25px;
@@ -111,11 +111,6 @@ img.rounded {
   border-radius: 50%;
 }
 
-.centered {
-  float: none!important;
-  margin: auto!important;
-}
-
 .wrapper {
   padding: @spaced/1.5;
   &--extra {
@@ -143,7 +138,7 @@ img.rounded {
     background: @gray
   }
   &--darkGray {
-    background: darken(@gray, 45%)
+    background: #151515;
   }
   &--bgGray {
     background: @bgGray
@@ -214,6 +209,9 @@ img.rounded {
     width: 1px;
     margin: auto;
   }
+  &--dark {
+    background: @white25;
+  }
 }
 
 .relative {
@@ -224,7 +222,7 @@ img.rounded {
 
   .center();
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 
   &__bottom {
     top: 75%

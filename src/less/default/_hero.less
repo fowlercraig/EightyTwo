@@ -1,12 +1,13 @@
 @hero__sm : 500px;
 @hero     : 500px;
-@hero__md : 700px;
+@hero__md : 580px;
 @hero__lg : 815px;
 @hero__xl : 900px;
 
 .hero {
 
   background-size: cover;
+  //background-position: bottom center;
 
 	@media @min {
 		height: @hero - 200;
@@ -35,9 +36,12 @@
       height: @hero__md - 200;
     }
     @media @tablet {
-      height: @hero__md - 100;
+      height: @hero__md - 170;
     }
     @media @desktop {
+      height: @hero__md - 80
+    }
+    @media @max {
       height: @hero__md
     }
   }
@@ -87,6 +91,17 @@
     
     &--lg{}
     
+  }
+
+  &--overlay {
+    &:before {
+      display: block;
+      content: '';
+      .cover();
+      background: @black50;
+      opacity: .5;
+      z-index: 8;
+    }
   }
 
   &--fixed {

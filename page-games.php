@@ -13,48 +13,70 @@
 	</div>
 </article>
 
-<div class="games-wrapper">
-	<div class="fs-row">
-		<div class="fs-cell fs-xl-half fs-lg-half fs-md-half fs-sm-3">
+<div class="fs-row">
+	<div class="fs-cell fs-xl-half fs-lg-half fs-md-half fs-sm-3">
 			<div class="fs-row">
-				<select class="fs-cell fs-all-half">
+				<select class="fs-cell fs-all-half js-filters">
 					<option>Filter</option>
-					<option>Arcade</option>
-					<option>Pinball</option>
-					<option>Console</option>
+					<option value="">All</option>
+					<option value="Arcade Video Game">Arcade Video Game</option>
+					<option value="Pinball">Pinball</option>
 				</select>
-				<select class="fs-cell fs-all-half">
-					<option>Sort</option>
-					<option>Alphabetical A &rarr; Z</option>
-					<option>Alphabetical Z &rarr; A</option>
+				<select class="fs-cell fs-all-half sort-options">
+					<option value="">Sort</option>
+					<option value="title">Alphabetical A &rarr; Z</option>
+					<option value="title-reversed">Alphabetical Z &rarr; A</option>
+					<option value="date">Date</option>
 				</select>
 			</div>
 		</div>
 		<div class="fs-cell fs-lg-4 fs-md-2 fs-sm-3 fs-right">
-			<form><input type="text" placeholder="Search" id="search" /></form>
+			<form><input type="text" placeholder="Search" id="search" class="js-shuffle-search" /></form>
 		</div>
-		<hr class="invisible fs-cell fs-all-full">
+	</div>
+</div>
 
-<?php $games = get_field('games'); ?>
-<?php foreach($games as $game): ?>
+<hr class="invisible fs-cell fs-all-full">
 
-		<div class="games__item fs-cell fs-xl-3 fs-lg-4 fs-md-half fs-sm-3">
-			<div class="games__item-type fs-cell fs-lg-2 fs-md-1 fs-sm-1 fs-contained relative">
-				<span class="accent accent--sm color--white"><?php echo strtoupper($game['type']); ?></span>
-			</div>
-			<div class="games__item-content fs-cell fs-lg-10 fs-md-5 fs-sm-2 fs-contained relative">
+<div class="games-wrapper">
+	<div class="fs-row">
+
+<?php 
+	$args =  array(
+		'posts_per_page'	=> -1,
+	); 
+	$query = new WP_Query( $args );
+	$games = $query->get_posts();
+?>
+
+<?php #$games = get_field('games'); ?>
+<?php #foreach($games as $game): ?>
+<?php foreach ( $games as $post ) : setup_postdata( $post ); ?>
+
+		<?php 
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumb', true);
+			if ( has_post_thumbnail() ) {
+				$thumb_url = $thumb_url_array[0];
+			} else {
+				$thumb_url = '/assets/img/1459313206_507.png';
+			}
+		?>
+
+		<div class="games__item fs-cell fs-xl-3 fs-lg-4 fs-md-half fs-sm-3" data-cat="<?php foreach((get_the_category()) as $category) { echo $category->cat_name; } ?>" data-title="<?php echo get_the_title(); ?>">
+			<div class="games__item-content fs-cell fs-lg-fullfs-md-full fs-sm-2 fs-contained relative">
 				<div class="centered wrapper">
-					<div class="games__item-image"></div>
+					<div class="games__item-image" style="background-image:url(<?php echo $thumb_url; ?>);"></div>
 					<div class="games__item-info">
-						<span class="title title--sm color--white"><?php echo $game['name']; ?></span><br>
-						<span class="title title--sm color--white--50"><?php echo $game['manufacturer']; ?></span>
-						<span class="title title--sm color--white--50"><?php echo $game['year']; ?></span>
+						<span class="title title--type title--sm color--white--50"><?php foreach((get_the_category()) as $category) { echo $category->cat_name; } ?></span><br>
+						<span class="title title--main title--sm color--white"><?php echo get_the_title(); ?></span><br>
+						<span class="title title--type title--sm color--white--50"><?php the_field('maker'); ?> | <?php the_field('year'); ?></span>
 					</div>
 				</div>
 			</div>
 		</div>
 
-<?php endforeach; ?>
+<?php endforeach; wp_reset_postdata(); ?>
 
 	</div>
 </div>

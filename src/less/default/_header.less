@@ -17,7 +17,39 @@
   &--md {}
   
   &--lg {
-  	padding: @spaced 0;
+    @media @min {
+      padding: @spaced*.5 0;  
+    }
+  	@media @tablet {
+      padding: @spaced 0;  
+    }
+    @media @desktop {
+      padding: @spaced 0;  
+    }
+  }
+
+  &--clone {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transform: translateY(-100%);
+    background: lighten(@black, 10%);
+    transition: 200ms ease;
+    padding: @spaced*.5 0;
+
+    .btn--nav {
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .btn--logo {
+      padding-left: 30px + @spaced!important;
+    }
+
+  }
+
+  &--stick {
+    transform: translateY(0);
   }
 
   .menu {

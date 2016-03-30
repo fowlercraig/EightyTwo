@@ -22,16 +22,18 @@
 	<div class="fs-row">
 
 		<?php if($i % 2 == 0): ?>
-		<div class="drinks-menu fs-cell fs-lg-half fs-md-half fs-sm-3 fs-right">
+		<div class="drinks-menu fs-cell fs-lg-half fs-md-full fs-sm-3 fs-right">
 		<?php else: ?>
-		<div class="drinks-menu fs-cell fs-lg-half fs-md-half fs-sm-3">
+		<div class="drinks-menu fs-cell fs-lg-half fs-md-full fs-sm-3">
 		<?php endif; ?>
+			<span class="title title--md color--white"><?php echo $drink['title']; ?></span>
+			<hr class="divider divider--dark">
 			<?php echo $drink['drinks']; ?>
 		</div>
-		<div class="fs-cell fs-lg-half fs-md-half fs-sm-3">
+		<div class="fs-cell fs-lg-half fs-md-full fs-sm-3">
 			<?php $gallery = $drink['gallery']; ?>
 			<?php if($gallery): ?>
-			<div class="drink-carousel carousel">
+			<div class="drinks-carousel carousel">
 			<?php foreach($gallery as $image): ?>
 				<div class="carousel__slide">
 					<img src="<?php echo $image['sizes']['large']; ?>" class="img-responsive" />

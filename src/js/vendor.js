@@ -9,10 +9,10 @@
 // @codekit-prepend "../bower_components/formstone/dist/js/background.js"
 
 // Other Plugins
-// @codekit-prepend "../bower_components/components-modernizr/modernizr.js"
+// @codekit-prepend "../bower_components/Headhesive.js/dist/headhesive.js"
 // @codekit-prepend "../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"
 // @codekit-prepend "../bower_components/ScrollToFixed/jquery-scrolltofixed-min.js"
 // @codekit-prepend "../bower_components/jQuery-One-Page-Nav/jquery.nav.js"
 // @codekit-prepend "../bower_components/jquery.stellar/jquery.stellar.min.js"
-// @codekit-prepend "../bower_components/search/jquery.quicksearch.js"
+// @codekit-prepend "../bower_components/shufflejs/dist/jquery.shuffle.modernizr.js"
 // @codekit-prepend "../bower_components/instafeed/instafeed.js"

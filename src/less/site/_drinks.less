@@ -1,13 +1,26 @@
 .drinks {
+  &-carousel {
+    margin-bottom: @spaced*2;
+  }
   &-menu {
+    margin-bottom: @spaced*2;
     ul {
       margin: 0;
       padding: 0;
+      @media @min {
+        column-count: 2;  
+      }
+      @media @tablet {
+        column-count: 2;
+      }
+      @media @desktop {
+        column-count: 2;
+      }
       li {
         margin: 0;
-        margin-bottom: 10px;
+        margin-bottom: @spaced/2;
         strong {
-          .font_size(24);
+          .font_size(20);
           color: @white;
           .headerFont();
         }
