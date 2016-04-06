@@ -68,9 +68,9 @@
 				<div class="centered wrapper">
 					<div class="games__item-image" style="background-image:url(<?php echo $thumb_url; ?>);"></div>
 					<div class="games__item-info">
-						<span class="title title--type title--sm color--white--50"><?php foreach((get_the_category()) as $category) { echo $category->cat_name; } ?></span><br>
+						<span class="title title--type title--sm color--gray"><?php foreach((get_the_category()) as $category) { echo $category->cat_name; } ?></span><br>
 						<span class="title title--main title--sm color--white"><?php echo get_the_title(); ?></span><br>
-						<span class="title title--type title--sm color--white--50"><?php the_field('maker'); ?> | <?php the_field('year'); ?></span>
+						<span class="title title--type title--sm color--gray"><?php the_field('maker'); ?> | <?php the_field('year'); ?></span>
 					</div>
 				</div>
 			</div>

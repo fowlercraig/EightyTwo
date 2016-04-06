@@ -112,7 +112,10 @@ function headHesive(){
 	        clone:   'header--clone',
 	        stick:   'header--stick',
 	        unstick: 'header--unstick'
-	    }
+	    },
+      onInit:    function () {
+        $(".mobile-toggle").swap();
+      },
 	};
 
 	// Initialise with options
@@ -127,8 +130,10 @@ $(document).ready(function(){
 	$('.home__nav').onePageNav({
 		currentClass: 'current'
 	});
-	$.stellar({
-		horizontalScrolling: false,
-		verticalOffset: 40
-	});
+  if(!Modernizr.touch){ 
+	 $.stellar({
+	 	 horizontalScrolling: false,
+		  verticalOffset: 40
+	 });
+  }
 });
