@@ -15,18 +15,29 @@
       line-height: 1.2;
       span {
         background: @black;
-        box-shadow: 0 0 @spaced @black50;
+        //box-shadow: 0 0 @spaced @black50;
       }
     }
     h3 {
       @media @min {
-        .font_size(32);
+        .font_size(24);
       }
       @media @tablet {
-        .font_size(48);
+        .font_size(44);
+
       }
       @media @desktop {
+        .font_size(40);  
+        line-height: 1.15;
+      }
+      @media @max {
         .font_size(53);  
+        position: relative;
+      }
+
+      span {
+        position: relative;
+        z-index: 1;
       }
       
     }
