@@ -5,7 +5,7 @@
 	<div style="position: relative; z-index:99">
 		<div class="hentry__content">
 			<div class="fs-row">
-				<div class="fs-cell fs-lg-8 fs-md-5 fs-sm-3 fs-centered">
+				<div class="fs-cell fs-lg-10 fs-md-5 fs-sm-3 fs-centered">
 					<?php the_post(); the_content(); ?>
 				</div>
 			</div>

@@ -54,7 +54,7 @@ if( $seoTitle == 'location' ):
 
 <?php else: ?>
 
-	<div id="<?php echo seoString(get_the_title()); ?>" class="home__hero hero wallpaper--parallax bg--black relative" <?php if($thumb_id): ?>style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75"<?php endif; ?>>
+	<div id="<?php echo seoString(get_the_title()); ?>" class="home__hero hero hero--sm wallpaper--parallax bg--black relative" <?php if($thumb_id): ?>style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75"<?php endif; ?>>
 	<div class="centered centered__bottomer">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white">
@@ -79,19 +79,11 @@ if( $seoTitle == 'location' ):
 
 <div class="home__nav">
 	<div class="home__nav-button">
-		<a class="accent accent--sm" href="#home">
-			<span class="bg--black color--white">
-				Home
-			</span>
-		</a>
+		<a class="accent accent--sm" href="#home"></a>
 	</div>
 	<?php foreach($home_posts as $post): setup_postdata( $post ); ?>
 	<div class="home__nav-button">
-		<a class="accent accent--sm" href="#<?php echo seoString(get_the_title()); ?>">
-			<span class="bg--black color--white">
-				<?php the_title(); ?>
-			</span>
-		</a>
+		<a class="accent accent--sm" href="#<?php echo seoString(get_the_title()); ?>"></a>
 	</div>
 	<?php endforeach; wp_reset_postdata(); ?>
 </div>	
