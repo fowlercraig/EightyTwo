@@ -10,22 +10,25 @@
 .title {
 
   .headerFont();
-  letter-spacing: -3px;
   text-rendering: optimizelegibility;
 
 	&--bold {
 		font-weight: bold;
 	}
   
-  &--sm {}
+  &--sm {
+
+  }
   &--md {
     line-height: 1.2;
+    letter-spacing: -1.5px;
     @media @tablet {
       .font_size(24)
     }
   }
   &--lg {
   	line-height: 1.2;
+    letter-spacing: -3px;
   	@media @tablet {
   		.font_size(48)
   	}
