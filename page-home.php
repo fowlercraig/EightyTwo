@@ -40,10 +40,12 @@ if( $seoTitle == 'location' ):
 ?>
 
 <div id="<?php echo $seoTitle; ?>" class="home__hero hero  bg--white relative">
-	<div class="centered centered__bottomer">
+	<div class="centered">
 		<div class="fs-row">
-			<div class="fs-cell fs-all-full color--white">
-				<h2 class="home__title title title--xl color--white"><a href="<?php the_permalink(); ?>" class="bg--black"><?php the_title(); ?></a></h2>
+			<div class="fs-cell fs-all-full color--black">
+				<div class="home__hero-copy">
+					<?php the_field('intro_copy'); ?>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -52,7 +54,10 @@ if( $seoTitle == 'location' ):
 <div class="home__hero hero--padded bg--darkGray">
 	<div class="fs-row">
 		<div class="home__hero-copy fs-cell fs-lg-6 fs-md-5 fs-sm-3 color--white">
-			<?php the_field('intro_copy'); ?>
+			<h2 class="home__title title title--xl color--white"><a href="<?php the_permalink(); ?>" class="bg--black">Info</a></h2>
+			<?php the_content(); ?>
+			<hr class="compact invisible">
+			<a href="<?php the_permalink(); ?>" class="btn btn--primary bg--white color--black">More Info</a>
 		</div>
 	</div>
 </div>
@@ -72,6 +77,8 @@ if( $seoTitle == 'location' ):
 	<div class="fs-row">
 		<div class="home__hero-copy fs-cell fs-lg-6 fs-md-5 fs-sm-3 color--white">
 			<?php the_field('intro_copy'); ?>
+			<hr class="compact invisible">
+			<a href="<?php the_permalink(); ?>" class="btn btn--primary bg--white color--black">More Info</a>
 		</div>
 	</div>
 </div>

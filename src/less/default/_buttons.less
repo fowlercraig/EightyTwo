@@ -40,6 +40,8 @@ input[type=button] {
 
   &--primary {
     .animated();
+    font-weight: normal;
+    letter-spacing: 0px;
   }
 
   &--disabled {
@@ -75,13 +77,13 @@ input[type=button] {
     }
     @media @tablet {
       margin: 0 10px;
-      height: @height_nav;
-      line-height: @height_nav;  
+      height: @height_nav+5;
+      line-height: @height_nav+5;  
     }
     @media @desktop {
       margin: 0 15px;
-      height: @height_nav;
-      line-height: @height_nav;  
+      height: @height_nav+5;
+      line-height: @height_nav+5;  
     }
   }
 

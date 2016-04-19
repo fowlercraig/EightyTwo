@@ -17,6 +17,9 @@ body,html {
       transition: 300ms ease;
       padding: 0 10px;
       margin-left: -10px;
+      @media @desktop {
+        letter-spacing: -2px;
+      }
       &:hover {
         color: @black;
         background: @white;
@@ -41,6 +44,9 @@ body,html {
       h3 {
         .font_size(36);
         line-height: 1.2;
+        @media @desktop {
+          letter-spacing: -2px;
+        }
       }
     }
   }

@@ -3,7 +3,7 @@
 
 <footer id="footer">
   <div class="fs-row">
-    <div class='fs-cell fs-lg-6 fs-md-6 fs-sm-3'>
+    <div class='fs-cell fs-lg-6 fs-md-6 fs-sm-3 color--white'>
       <span class="btn btn--nav btn__first">&copy; <?php bloginfo('name' );?> <?php echo date('Y'); ?></span>
       <a target="_blank" href="https://www.facebook.com/eightytwola/" class="btn btn--nav btn__icon ss-social-circle ss-facebook"></a>
       <a target="_blank" href="https://www.instagram.com/EightyTwoLA/" class="btn btn--nav btn__icon ss-social-circle ss-instagram"></a>

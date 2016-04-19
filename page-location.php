@@ -45,7 +45,7 @@
 
 <div class="fs-row">
 	<div class="fs-cell fs-lg-8 fs-md-full fs-sm-3">
-		<div class="fs-row">
+		<div class="fs-row color--white">
 			<div class="fs-cell fs-all-half fs-sm-full">
 				<p>
 					Entry is on a first-come, first-served basis and is always 100% free with no cover charge.  

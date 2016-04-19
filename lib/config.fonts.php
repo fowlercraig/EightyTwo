@@ -1,1 +1,2 @@
 <link href='https://fonts.googleapis.com/css?family=PT+Serif|Karla:400,700' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/60ba86a9-5a58-4d6b-b3fc-60f845fa6d81.css"/>
