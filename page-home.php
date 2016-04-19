@@ -68,7 +68,7 @@ if( $seoTitle == 'location' ):
 	<div class="centered centered__bottomer">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white">
-				<h2 class="home__title title title--xl color--white"><a href="<?php the_permalink(); ?>" class="bg--black"><?php the_title(); ?></a></h2>
+				<h2 class="home__title title title--xl color--white"><a href="<?php the_permalink(); ?>" class="bg--black-90"><?php the_title(); ?></a></h2>
 			</div>
 		</div>
 	</div>
