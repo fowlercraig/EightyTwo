@@ -5,7 +5,8 @@
 	<div style="position: relative; z-index:99">
 		<div class="hentry__content">
 			<div class="fs-row">
-				<div class="fs-cell fs-lg-8 fs-md-5 fs-sm-3 fs-centered">
+				<div class="fs-cell fs-lg-8 fs-md-5 fs-sm-3 color--white mainType">
+					<hr class="invisible">
 					<?php the_post(); the_content(); ?>
 				</div>
 			</div>
@@ -14,6 +15,10 @@
 </article>
 
 <div class="fs-row">
+	<div class="fs-cell fs-all-full">
+		<hr class="divider compact bg--white--25">
+		<hr class="divider invisible">
+	</div>
 	<div class="fs-cell fs-xl-half fs-lg-half fs-md-half fs-sm-3">
 			<div class="fs-row">
 				<select class="fs-cell fs-all-half js-filters">

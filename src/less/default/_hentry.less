@@ -5,20 +5,37 @@
   &__posted{}
   
   &__content{
-  	margin-bottom: @spaced*3;
-  	.font_size(18);
+  	margin-bottom: @spaced*1.5;
+    color: @white;
+    h3 {
+      color: @white;
+      .font_size(40);
+      line-height: 1.1;
+      letter-spacing: -1px;
+      &.smallish {
+        .font_size(24);
+        margin: 0;
+        margin-bottom: 10px;
+      }
+    }
+    p {
+      color: @lightGray;
+      .font_size(18);
+    }
   }
 
   &__header {
     h1,h2,h3,h4,h5 {
       color: @white;
       line-height: 1.2;
+      background: @black75;
       span {
-        background: @black;
+        
         //box-shadow: 0 0 @spaced @black50;
       }
     }
     h3 {
+      padding: @spaced/3 @spaced/2;
       @media @min {
         .font_size(24);
       }
@@ -29,11 +46,12 @@
       @media @desktop {
         .font_size(40);  
         line-height: 1.15;
-        letter-spacing: -2px;
+        letter-spacing: -1px;
       }
       @media @max {
-        .font_size(53);  
+        .font_size(43);  
         position: relative;
+        letter-spacing: -1px;
       }
 
       span {

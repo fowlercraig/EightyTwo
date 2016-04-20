@@ -8,46 +8,25 @@ $thumb_url = $thumb_url_array[0];
 ?>
 
 <article <?php post_class(); ?>>
-	<header class="hentry__header">
-		<div class="hero hero--md hero--overlay relative bg--black" style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75">
-			<div class="centered centered__bottom">
-				<div class="fs-row">
-					<div class='fs-cell fs-lg-half fs-md-6 fs-sm-3 color--white'>
-						<?php the_field('intro_copy'); ?>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-	<hr class="invisible">
-	<div style="position: relative; z-index:99">
-		<div class="hentry__content">
-			<div class="fs-row">
-				<div class="fs-cell fs-lg-8 fs-md-5 fs-sm-3 color--white">
-					<?php the_post(); the_content(); ?>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php get_template_part('parts/page', 'header' ); ?>
 </article>
 
-<hr class="divider bg--white--25">
+<hr class="invisible">
 
 <div class="private__wrapper">
-	<div class="private__quotes">
+	<div class="private__policy-wrapper" style="background-image: url(<?php the_field('birds_eye'); ?>);">
 		<div class="fs-row">
-			<div class='fs-cell fs-all-full'>
-				<div class="carousel">
-					<?php $quotes = get_field('quotes'); ?>
-					<?php foreach($quotes as $quote): ?>
-					<div class="carousel__slide">
-						<?php echo $quote['quote']; ?>
-					</div>
-					<?php endforeach; ?>
-				</div>
+			<div class="private__policy fs-cell fs-lg-half fs-md-half color--white hentry__content">
+				<?php the_post(); the_content(); ?>
+				<?php the_field('policy'); ?>
 			</div>
 		</div>
 	</div>
+</div>
+
+<hr class="invisible">
+
+<div class="private__wrapper">
 	<div class="private__gallery">
 		<div class="fs-row">
 			<div class='fs-cell fs-all-full'>
@@ -62,11 +41,17 @@ $thumb_url = $thumb_url_array[0];
 			</div>
 		</div>
 	</div>
-	<div class="private__policy-wrapper" style="background-image: url(<?php the_field('birds_eye'); ?>);">
+	<div class="private__quotes" style="display:none">
 		<div class="fs-row">
-			<div class="private__policy fs-cell fs-lg-half fs-md-half color--white">
-				<hr class="invisible">
-				<?php the_field('policy'); ?>
+			<div class='fs-cell fs-all-full'>
+				<div class="carousel">
+					<?php $quotes = get_field('quotes'); ?>
+					<?php foreach($quotes as $quote): ?>
+					<div class="carousel__slide">
+						<?php echo $quote['quote']; ?>
+					</div>
+					<?php endforeach; ?>
+				</div>
 			</div>
 		</div>
 	</div>

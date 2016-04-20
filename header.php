@@ -19,7 +19,7 @@
 <script src="/assets/js/app.ie.min.js"></script>
 <![endif]-->
 
-<?php if(is_front_page() || is_page('location')): ?>
+<?php if(is_front_page() || is_page('info')): ?>
 <script src="https://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.22"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplace-js/0.2.7/maplace.js"></script>
 <?php endif; ?>

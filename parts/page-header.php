@@ -7,11 +7,11 @@ $thumb_url = $thumb_url_array[0];
 ?>
 
 <header class="hentry__header">
-  <div class="hero hero--overlay relative bg--black" style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75">
-    <div class="centered">
+  <div class="hero hero--sm hero--overlay relative bg--black" style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75">
+    <div class="centered centered__bottom">
       <div class="fs-row">
         <div class='fs-cell fs-xl-8 fs-lg-8 fs-md-6 fs-sm-3 color--white'>
-          <?php the_field('intro_copy'); ?>
+          <?php #the_field('page_header'); ?>
         </div>
       </div>
     </div>
