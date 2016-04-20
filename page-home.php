@@ -73,25 +73,27 @@ if( $seoTitle == 's' ):
 
 <?php else: ?>
 
-<div id="<?php echo seoString(get_the_title()); ?>" class="home__hero hero hero--sm wallpaper--parallax bg--black relative" <?php if($thumb_id): ?>style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75"<?php endif; ?>>
-	<div class="centered centered__bottomer">
+
+<div class="relative">
+	<a href="<?php the_permalink(); ?>" class="covered" style="z-index: 50;"></a>
+	<div id="<?php echo seoString(get_the_title()); ?>" class="home__hero hero hero--sm wallpaper--parallax bg--black relative" <?php if($thumb_id): ?>style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75"<?php endif; ?>>
+		<div class="centered centered__bottomer">
+			<div class="fs-row">
+				<div class="fs-cell fs-all-full color--white">
+					<h2 class="home__title title title--xl color--white"><a href="<?php the_permalink(); ?>" class="bg--black-90"><?php the_title(); ?></a></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home__hero hero--padded bg--darkGray">
 		<div class="fs-row">
-			<div class="fs-cell fs-all-full color--white">
-				<h2 class="home__title title title--xl color--white"><a href="<?php the_permalink(); ?>" class="bg--black-90"><?php the_title(); ?></a></h2>
+			<div class="home__hero-copy fs-cell fs-lg-8 fs-md-6 fs-sm-3 color--white">
+				<?php the_field('intro_copy'); ?>
+				<hr class="compact invisible">
 			</div>
 		</div>
 	</div>
 </div>
-<div class="home__hero hero--padded bg--darkGray">
-	<div class="fs-row">
-		<div class="home__hero-copy fs-cell fs-lg-8 fs-md-6 fs-sm-3 color--white">
-			<?php the_field('intro_copy'); ?>
-			<hr class="compact invisible">
-			<a href="<?php the_permalink(); ?>" class="btn btn--primary bg--white color--black">More Info</a>
-		</div>
-	</div>
-</div>
-
 <?php endif; ?>
 
 <?php endforeach; wp_reset_postdata(); ?>
