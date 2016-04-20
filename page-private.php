@@ -62,10 +62,10 @@ $thumb_url = $thumb_url_array[0];
 			</div>
 		</div>
 	</div>
-	<hr class="divider bg--white--25">
 	<div class="private__policy-wrapper" style="background-image: url(<?php the_field('birds_eye'); ?>);">
 		<div class="fs-row">
 			<div class="private__policy fs-cell fs-lg-half fs-md-half color--white">
+				<hr class="invisible">
 				<?php the_field('policy'); ?>
 			</div>
 		</div>

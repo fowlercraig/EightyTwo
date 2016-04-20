@@ -1,7 +1,9 @@
 .gform {
 	&_wrapper {
 		min-width: 100%;
-		background: @white;
+		margin-bottom: @spaced*2!important;
+		border: 1px solid @white25;
+		//background: @white;
 		@media @mobile {
 			padding: 0;
 		}
@@ -13,20 +15,34 @@
 			padding: 10px 0px 10px 20px;
 		}
 	}
+	&_button {
+		font-weight: normal!important;
+		background: none!important;
+		border: 1px solid @white25;
+	}
 	&_body {
 		min-width: 100%;
 	}
 	&_fields {
 		.gfield {
+			margin-bottom: 10px;
 			&_label {
 				font-weight: 400!important;
-				margin-bottom: 0px!important
+				margin-bottom: 0px!important;
+				.headerFont();
+				color: @gray;
+				letter-spacing: -.5px;
 			}
 			&_description {
 				padding-top: 0!important;
 			}
-			input {
+			input,textarea {
 				margin-bottom: 0;
+				color: @textGray;
+				padding-left: 10px!important;
+				padding-right: 10px!important;
+				font-weight: normal;
+				.mainFont();
 			}
 			&:before {
 				display: none;
