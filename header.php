@@ -37,13 +37,16 @@
 <header id="header" class="header header--lg" style="z-index: 100">
 <?php endif; ?>
   <div class="fs-row">
-    <menu id="header-main" class="fs-cell fs-lg-4 fs-md-2 fs-sm-2">
+    <menu id="header-main" class="fs-cell fs-xl-4 fs-lg-2 fs-md-1 fs-sm-2">
       <a href="/" id="header--logo" class="btn btn--logo btn--nav btn__first color--white"><?php if(!is_front_page()):?><span>/ <?php the_title(); ?></span><?php endif; ?></a>
     </menu>
     <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-hide fs-sm-1 text-right">
       <a data-swap-target="#mobile-menu" class="mobile-toggle btn btn--hamburg btn--hamburg__white btn--nav btn_first btn_last">&nbsp;</a>
     </menu>
-    <menu id="header-navigation" class="fs-cell fs-lg-8 fs-md-4 fs-sm-hide text-right color--white">
+    <menu id="header-navigation" class="fs-cell fs-xl-8 fs-lg-10 fs-md-5 fs-sm-hide text-right color--white">
+      <ul class="menu fl--right menu--private">
+        <li class="menu-item"><a href="#" class="btn btn--nav btn__last"><span>Private Events</span></a></li>
+      </ul>
       <?php echo wp_nav_menu( $mainMenu ); ?>
     </menu>
   </div>

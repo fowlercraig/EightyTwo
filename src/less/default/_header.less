@@ -69,6 +69,44 @@
     margin: 0;
     border-bottom: 2px solid @white25;
 
+    &--private {
+      margin-left: @spaced;
+      border: 2px solid transparent;
+      border-radius: 3px;
+      @media @min {
+        padding: 0 0 0 15px;  
+      }
+      @media @desktop {
+        padding: 0 15px;
+      }
+      
+      opacity: .5;
+      transition: opacity 300ms ease;
+      &:hover {
+        opacity: 1;
+        li {
+          border-color: transparent!important
+        }
+        a.btn--nav {
+          border-color: transparent!important
+        }
+      }
+      span {
+        border: 1px solid @white;
+        border-radius: 4px;
+        padding: 8px;
+        font-weight: normal;
+        letter-spacing: 0px;
+      }
+      .menu-item {
+        &:hover {
+          a {
+            border: none!important;  
+          }
+        }
+      }
+    }
+
     &-item {
       display: inline-block;
       margin-bottom: -2px;

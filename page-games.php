@@ -17,7 +17,7 @@
 <div class="fs-row">
 	<div class="fs-cell fs-all-full">
 		<hr class="divider compact bg--white--25">
-		<hr class="divider invisible">
+		<h2 class="color--white">Current Line-up</h2>
 	</div>
 	<div class="fs-cell fs-xl-half fs-lg-half fs-md-half fs-sm-3">
 			<div class="fs-row">

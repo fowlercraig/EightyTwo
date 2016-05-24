@@ -5,7 +5,8 @@
 	<div style="position: relative; z-index:99">
 		<div class="hentry__content">
 			<div class="fs-row">
-				<div class="fs-cell fs-lg-8 fs-md-5 fs-sm-3 fs-centered">
+				<div class="fs-cell fs-lg-8 fs-md-5 fs-sm-3 color--white mainType">
+					<hr class="invisible">
 					<?php the_post(); the_content(); ?>
 				</div>
 			</div>
@@ -28,7 +29,11 @@
 		<?php endif; ?>
 			<span class="title title--md color--white"><?php echo $drink['title']; ?></span>
 			<hr class="divider divider--dark">
-			<?php echo $drink['drinks']; ?>
+			<?php # echo $drink['drinks']; ?>
+			<div class="fs-row">
+				<div class="fs-cell fs-lg-half fs-md-half fs-sm-3"><?php echo $drink['menu_left']; ?></div>
+				<div class="fs-cell fs-lg-half fs-md-half fs-sm-3"><?php echo $drink['menu_right']; ?></div>
+			</div>
 		</div>
 		<div class="fs-cell fs-lg-half fs-md-full fs-sm-3">
 			<?php $gallery = $drink['gallery']; ?>
@@ -37,6 +42,11 @@
 			<?php foreach($gallery as $image): ?>
 				<div class="carousel__slide">
 					<img src="<?php echo $image['sizes']['large']; ?>" class="img-responsive" />
+					<?php if($image['caption']): ?>
+					<figcaption>
+						<?php echo $image['caption']; ?>
+					</figcaption>
+					<?php endif; ?>
 				</div>
 			<?php endforeach; ?>
 			</div>

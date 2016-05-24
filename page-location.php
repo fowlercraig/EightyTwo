@@ -44,6 +44,9 @@
 				<p>
 					For buyout inquiries and availability for large groups, please visit our Private Events page.
 				</p>
+				<p>
+					<a href="/private-events" class="btn btn--link">Private Events</a>
+				</p>
 			</div>
 					</div>
 				</div>
