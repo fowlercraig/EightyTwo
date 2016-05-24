@@ -89,7 +89,8 @@
 <hr class="invisible">
 <div class="carousel">
 
-<?php $features = get_field('featured'); ?>
+<?php $features = get_field('featureds'); ?>
+<?php if($features): ?>
 <?php foreach($features as $game): ?>
 
 	<div class="carousel__slide relative home__hero hero--overlay hero--sm wallpaper relative bg--gray" data-background-options='{"source":"<?php echo $game['image']['sizes']['gallery-lg']; ?>"}'>
@@ -105,7 +106,7 @@
 	</div>
 
 <?php endforeach; ?>
-
+<?php endif; ?>
 </div>
 
 <?php get_footer(); ?>

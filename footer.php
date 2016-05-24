@@ -18,7 +18,7 @@
   </div>
 </footer>
 
-<?php if(is_front_page() || is_page('info')): ?>
+<?php if(is_page('info')): ?>
 <script type="text/javascript">
   $(function() {
     new Maplace({
