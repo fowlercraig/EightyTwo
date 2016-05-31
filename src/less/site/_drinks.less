@@ -19,7 +19,10 @@
   &-menu {
     margin-bottom: @spaced*2;
     .title {
-      letter-spacing: -1px;
+      @media @tablet {
+        letter-spacing: -1px;  
+      }
+  
     }
     strong {
       .font_size(20);

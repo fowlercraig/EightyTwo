@@ -31,6 +31,12 @@
           display: block;
           margin-bottom: @spaced/2;
           color: @white;
+          @media @min {
+            letter-spacing: 0;
+          }
+          @media @tablet {
+            letter-spacing: -1px
+          }
         }
       }
     }

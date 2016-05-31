@@ -5652,8 +5652,10 @@ html {
 .drinks-menu {
   margin-bottom: 50px;
 }
-.drinks-menu .title {
-  letter-spacing: -1px;
+@media screen and (min-width: 740px) {
+  .drinks-menu .title {
+    letter-spacing: -1px;
+  }
 }
 .drinks-menu strong {
   font-size: 20px;
@@ -5738,6 +5740,16 @@ html {
   display: block;
   margin-bottom: 12.5px;
   color: #fff;
+}
+@media screen and (min-width: 300px) {
+  #instafeed--single .featured-caption .title {
+    letter-spacing: 0;
+  }
+}
+@media screen and (min-width: 740px) {
+  #instafeed--single .featured-caption .title {
+    letter-spacing: -1px;
+  }
 }
 #instafeed > div:first-child {
   display: none;
