@@ -9,9 +9,17 @@
     color: @white;
     h3 {
       color: @white;
-      .font_size(40);
-      line-height: 1.1;
-      letter-spacing: -1px;
+      @media @min {
+        .font_size(24);
+        line-height: 1.1;
+        //letter-spacing: -1px;
+      }
+      @media @tablet {
+        .font_size(40);
+        line-height: 1.1;
+        letter-spacing: -1px;  
+      }
+      
       &.smallish {
         .font_size(24);
         margin: 0;
@@ -20,7 +28,12 @@
     }
     p {
       color: @lightGray;
-      .font_size(18);
+      @media @min {
+        .font_size(14);
+      }
+      @media @tablet {
+        .font_size(18);  
+      }
     }
   }
 

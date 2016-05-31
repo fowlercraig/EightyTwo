@@ -42,8 +42,14 @@ body,html {
     }
     &-copy {
       h3 {
-        .font_size(36);
-        line-height: 1.2;
+        @media @min {
+          .font_size(23);
+          line-height: 1.2;  
+        }
+        @media @tablet {
+          .font_size(36);
+          line-height: 1.2;
+        }
         @media @desktop {
           letter-spacing: -2px;
         }
@@ -58,9 +64,11 @@ body,html {
     position: fixed;
     z-index: 199;
     @media @min {
+      visibility: hidden;
       right: @spaced;  
     }
     @media @tablet {
+      visibility: visible;
       right: @spaced*1.5;
     }
     @media @desktop {

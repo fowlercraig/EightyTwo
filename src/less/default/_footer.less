@@ -2,4 +2,23 @@
   a {
     color: @white;
   }
+  @media @min {
+    padding: @spaced 0;
+  }
+  @media @tablet {
+    padding: 0;
+  }
+  hr {
+    @media @min {
+      background: @white25;
+    }
+  }
+  .text-right {
+    @media @min {
+      text-align: left;
+    }
+    @media @tablet {
+      text-align: right;
+    }
+  }
 }

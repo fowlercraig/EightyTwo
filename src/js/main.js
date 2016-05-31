@@ -132,8 +132,8 @@ $(document).ready(function(){
 	});
   if(!Modernizr.touch){ 
 	 $.stellar({
-	 	 horizontalScrolling: false,
-		  verticalOffset: 40
+      horizontalScrolling: false,
+      verticalOffset: 40
 	 });
   }
 });

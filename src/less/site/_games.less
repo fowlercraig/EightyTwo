@@ -4,8 +4,14 @@
   }
   &__item {
     background: fade(@white, 8%);
-    margin-bottom: @spaced;
-    border-radius: 4px;a
+    @media @min {
+      margin-bottom: @spaced/2  
+    }
+    @media @tablet {
+      margin-bottom: @spaced;
+    }
+    
+    border-radius: 4px;
     &.show {
       opacity: 1;
     }
