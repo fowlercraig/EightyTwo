@@ -4924,6 +4924,18 @@ input[type=button] {
   margin-top: 0!important;
   padding-bottom: 0!important;
 }
+@media only screen and (min-width: 200px) and (max-width: 768px) {
+  .gform_wrapper .gform_body .top_label li.gfield.gf_right_half {
+    float: left;
+    clear: left !important;
+    width: 99%;
+  }
+  .gform_wrapper .gform_body .top_label li.gfield.gf_left_half {
+    float: left;
+    clear: left !important;
+    width: 99%;
+  }
+}
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -5665,7 +5677,7 @@ html {
   }
 }
 .games__item-content .centered {
-  min-width: 100%;
+  width: 100%;
 }
 .games__item-info {
   display: inline-block;
