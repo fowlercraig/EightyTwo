@@ -41,6 +41,7 @@
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 99999;
     transform: translateY(-100%);
     background: lighten(@black, 10%);
     transition: 200ms ease;
@@ -156,6 +157,16 @@
 #header {
   &.fs-swap-active {
     z-index: 9999!important;
+    position: fixed;
+    width: 100%;
+    #header--clone {
+      display: none;
+    }
+  }
+  &--clone {
+    &.fs-swap-active {
+      //display: none;
+    }
   }
   &--logo {
     @media @min {

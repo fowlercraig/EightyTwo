@@ -4558,6 +4558,12 @@ table tr th {
 }
 @media screen and (min-width: 300px) {
   .title--xl {
+    font-size: 32px;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 500px) {
+  .title--xl {
     font-size: 40px;
     font-size: 2.5rem;
   }
@@ -4946,8 +4952,18 @@ input[type=button] {
   display: none;
   z-index: 999;
 }
-#mobile-menu.fs-swap-active {
-  display: block;
+@media screen and (min-width: 300px) {
+  #mobile-menu.fs-swap-active {
+    display: block;
+  }
+}
+@media screen and (min-width: 740px) {
+  #mobile-menu.fs-swap-active {
+    display: none;
+  }
+}
+#mobile-menu #header--parties {
+  display: none;
 }
 #mobile-menu ul {
   margin: 0;
@@ -5004,7 +5020,7 @@ input[type=button] {
 }
 @media screen and (min-width: 300px) {
   .hero--md {
-    height: 380px;
+    height: 260px;
   }
 }
 @media screen and (min-width: 740px) {
@@ -5186,6 +5202,7 @@ input[type=button] {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 99999;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   background: #1a1a1a;
@@ -5295,6 +5312,11 @@ input[type=button] {
 }
 #header.fs-swap-active {
   z-index: 9999!important;
+  position: fixed;
+  width: 100%;
+}
+#header.fs-swap-active #header--clone {
+  display: none;
 }
 @media screen and (min-width: 300px) {
   #header--logo {
@@ -5356,10 +5378,20 @@ input[type=button] {
   }
 }
 .hentry__content h3.smallish {
-  font-size: 24px;
-  font-size: 1.5rem;
   margin: 0;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 300px) {
+  .hentry__content h3.smallish {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 740px) {
+  .hentry__content h3.smallish {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
 }
 .hentry__content p {
   color: #CBCBD2;
@@ -5515,9 +5547,10 @@ html {
 }
 @media screen and (min-width: 300px) {
   .home__hero-copy h3 {
-    font-size: 23px;
-    font-size: 1.4375rem;
+    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.2;
+    letter-spacing: -1px;
   }
 }
 @media screen and (min-width: 740px) {
@@ -5630,6 +5663,9 @@ html {
   .games__item > div {
     min-height: 80px;
   }
+}
+.games__item-content .centered {
+  min-width: 100%;
 }
 .games__item-info {
   display: inline-block;
@@ -5767,12 +5803,14 @@ html {
 }
 @media screen and (min-width: 300px) {
   #instafeed--single .featured-caption {
-    padding-top: 62.5px;
+    padding-top: 10px;
+    padding-bottom: 25px;
   }
 }
 @media screen and (min-width: 740px) {
   #instafeed--single .featured-caption {
     padding-top: 150px;
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width: 980px) {

@@ -69,7 +69,7 @@
 		?>
 
 		<div class="games__item fs-cell fs-xl-3 fs-lg-4 fs-md-half fs-sm-3" data-cat="<?php foreach((get_the_category()) as $category) { echo $category->cat_name; } ?>" data-title="<?php echo get_the_title(); ?>">
-			<div class="games__item-content fs-cell fs-lg-fullfs-md-full fs-sm-2 fs-contained relative">
+			<div class="games__item-content fs-cell fs-lg-full fs-md-full fs-sm-3 fs-contained relative">
 				<div class="centered wrapper">
 					<div class="games__item-image" style="background-image:url(<?php echo $thumb_url; ?>);"></div>
 					<div class="games__item-info">

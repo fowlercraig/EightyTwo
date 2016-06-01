@@ -12,8 +12,18 @@
 		
 		&.fs-swap {
 			&-active {
-				display: block;
+				@media @min {
+					display: block;
+				}
+				@media @tablet {
+					display: none;
+				}
+				//display: block;
 			}
+		}
+
+		#header--parties {
+			display: none;
 		}
 
 		ul {

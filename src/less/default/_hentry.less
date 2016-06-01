@@ -21,7 +21,16 @@
       }
       
       &.smallish {
-        .font_size(24);
+      //  .font_size(24);
+        @media @min {
+          .font_size(20);
+          //line-height: 1.2;  
+          //letter-spacing: -1px;
+        }
+        @media @tablet {
+          .font_size(24);
+          //line-height: 1.2;
+        }
         margin: 0;
         margin-bottom: 10px;
       }

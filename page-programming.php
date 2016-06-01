@@ -48,7 +48,7 @@
 			clientId: '92edd37c66a44760a6e11f658e4ec473',
 			accessToken: '3031273.1677ed0.7433495798e14df3b01c5ccdc1a160a6',
 			resolution: 'standard_resolution',
-			template: '<div class="featured fs-cell fs-lg-third fs-md-half fs-sm-half"><a class="open--image" href="{{image}}"><img src="{{image}}" class="img-responsive" /></a></div><div class="featured-caption fs-cell fs-lg-third fs-md-half fs-sm-half"><span class="title title--md">Posted {{model.created_time}}<br>{{caption}}</span></div>',
+			template: '<div class="featured fs-cell fs-lg-third fs-md-half fs-sm-full"><a class="open--image" href="{{image}}"><img src="{{image}}" class="img-responsive" /></a></div><div class="featured-caption fs-cell fs-lg-third fs-md-half fs-sm-full"><span class="title title--md">Posted {{model.created_time}}<br>{{caption}}</span></div>',
 			after: function() {
 				$('.open--image').magnificPopup({
 					type: 'image',
