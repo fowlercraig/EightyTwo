@@ -5200,6 +5200,18 @@ input[type=button] {
 .header--clone .btn--logo {
   padding-left: 55px !important;
 }
+@media screen and (min-width: 300px) {
+  .header--clone #header--logo {
+    height: 30px;
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .header--clone #header--logo {
+    height: 60px;
+    line-height: 60px;
+  }
+}
 .header--stick {
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -5284,9 +5296,17 @@ input[type=button] {
 #header.fs-swap-active {
   z-index: 9999!important;
 }
-#header--logo {
-  height: 70px;
-  line-height: 70px;
+@media screen and (min-width: 300px) {
+  #header--logo {
+    height: 30px;
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 740px) {
+  #header--logo {
+    height: 70px;
+    line-height: 70px;
+  }
 }
 #header--parties {
   clear: both;

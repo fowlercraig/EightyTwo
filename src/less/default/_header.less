@@ -55,6 +55,17 @@
       padding-left: 30px + @spaced!important;
     }
 
+    #header--logo {
+      @media @min {
+      height: 30px;
+      line-height: 30px
+    }
+    @media @tablet {
+      height: 60px;
+      line-height: 60px;  
+    }
+    }
+
   }
 
   &--stick {
@@ -147,8 +158,15 @@
     z-index: 9999!important;
   }
   &--logo {
-    height: 70px;
-    line-height: 70px;
+    @media @min {
+      height: 30px;
+      line-height: 30px
+    }
+    @media @tablet {
+      height: 70px;
+      line-height: 70px;  
+    }
+    
   }
   &--parties {
     clear: both;
