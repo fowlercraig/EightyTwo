@@ -45,6 +45,13 @@
     </menu>
     <menu id="header-navigation" class="fs-cell fs-lg-8 fs-md-4 fs-sm-hide text-right color--white">
       <?php echo wp_nav_menu( $mainMenu ); ?>
+      <div id="header--parties">
+        <a target="_blank" href="https://www.facebook.com/eightytwola/" class="btn btn--nav btn__icon ss-social-circle ss-facebook"></a>
+        <a target="_blank" href="https://www.instagram.com/EightyTwoLA/" class="btn btn--nav btn__icon ss-social-circle ss-instagram"></a>
+        <a target="_blank" href="https://twitter.com/EightyTwoLA" class="btn btn--nav btn__icon ss-social-circle ss-twitter"></a>
+        <span>|</span>
+        <a href="/private-events/">Private Events</a>
+      </div>
     </menu>
   </div>
 </header>

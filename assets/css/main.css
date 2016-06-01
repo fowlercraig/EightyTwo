@@ -4230,8 +4230,8 @@ form textarea--nav {
   form input[type=url]--nav,
   form textarea--nav {
     margin: 0 5px;
-    height: 30px;
-    line-height: 30px;
+    height: 15px;
+    line-height: 15px;
   }
 }
 @media screen and (min-width: 740px) {
@@ -4242,8 +4242,8 @@ form textarea--nav {
   form input[type=url]--nav,
   form textarea--nav {
     margin: 0 10px;
-    height: 65px;
-    line-height: 65px;
+    height: 35px;
+    line-height: 35px;
   }
 }
 @media screen and (min-width: 980px) {
@@ -4254,8 +4254,8 @@ form textarea--nav {
   form input[type=url]--nav,
   form textarea--nav {
     margin: 0 15px;
-    height: 65px;
-    line-height: 65px;
+    height: 35px;
+    line-height: 35px;
   }
 }
 form input[type=text]--logo,
@@ -4281,7 +4281,7 @@ form textarea--logo {
   form input[type=tel]--logo,
   form input[type=url]--logo,
   form textarea--logo {
-    padding-left: 55px !important;
+    padding-left: 40px !important;
   }
 }
 @media screen and (min-width: 740px) {
@@ -4291,7 +4291,7 @@ form textarea--logo {
   form input[type=tel]--logo,
   form input[type=url]--logo,
   form textarea--logo {
-    padding-left: 85px !important;
+    padding-left: 55px !important;
   }
 }
 @media screen and (min-width: 980px) {
@@ -4301,7 +4301,7 @@ form textarea--logo {
   form input[type=tel]--logo,
   form input[type=url]--logo,
   form textarea--logo {
-    padding-left: 85px !important;
+    padding-left: 55px !important;
   }
 }
 form input[type=text]--logo span,
@@ -4663,8 +4663,8 @@ input[type=button] {
   .button--nav,
   .epm-submit-chimp--nav {
     margin: 0 5px;
-    height: 30px;
-    line-height: 30px;
+    height: 15px;
+    line-height: 15px;
   }
 }
 @media screen and (min-width: 740px) {
@@ -4672,8 +4672,8 @@ input[type=button] {
   .button--nav,
   .epm-submit-chimp--nav {
     margin: 0 10px;
-    height: 65px;
-    line-height: 65px;
+    height: 35px;
+    line-height: 35px;
   }
 }
 @media screen and (min-width: 980px) {
@@ -4681,8 +4681,8 @@ input[type=button] {
   .button--nav,
   .epm-submit-chimp--nav {
     margin: 0 15px;
-    height: 65px;
-    line-height: 65px;
+    height: 35px;
+    line-height: 35px;
   }
 }
 .btn--logo,
@@ -4702,21 +4702,21 @@ input[type=button] {
   .btn--logo,
   .button--logo,
   .epm-submit-chimp--logo {
-    padding-left: 55px !important;
+    padding-left: 40px !important;
   }
 }
 @media screen and (min-width: 740px) {
   .btn--logo,
   .button--logo,
   .epm-submit-chimp--logo {
-    padding-left: 85px !important;
+    padding-left: 55px !important;
   }
 }
 @media screen and (min-width: 980px) {
   .btn--logo,
   .button--logo,
   .epm-submit-chimp--logo {
-    padding-left: 85px !important;
+    padding-left: 55px !important;
   }
 }
 .btn--logo span,
@@ -5283,6 +5283,35 @@ input[type=button] {
 }
 #header.fs-swap-active {
   z-index: 9999!important;
+}
+#header--logo {
+  height: 70px;
+  line-height: 70px;
+}
+#header--parties {
+  clear: both;
+  float: right;
+  font-weight: bold;
+  letter-spacing: 0px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  height: 30px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}
+#header--parties a {
+  padding: 0;
+  margin: 0;
+  margin: 0 1px;
+  color: rgba(255, 255, 255, 0.5);
+}
+#header--parties a:hover {
+  color: #fff;
+}
+#header--parties a:before {
+  color: #fff;
+  position: relative;
+  top: .125em;
 }
 .hentry__content {
   margin-bottom: 37.5px;
