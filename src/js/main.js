@@ -134,10 +134,11 @@ $(document).ready(function(){
 	$('.home__nav').onePageNav({
 		currentClass: 'current'
 	});
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { } else {
+  //if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { } else {
 	 $.stellar({
       horizontalScrolling: false,
-      verticalOffset: 40
+      //scrollProperty: 'transform'
+      //verticalOffset: 40
 	 });
-  }
+  //}
 });

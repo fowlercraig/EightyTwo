@@ -6,7 +6,14 @@
 
 .hero {
 
-  background-size: cover;
+  @media @min {
+    background-position: center center;
+    background-size: auto 145%;
+  }
+  @media @tablet {
+    background-size: cover;  
+  }
+  
   height: @hero;
   //background-position: bottom center;
 
