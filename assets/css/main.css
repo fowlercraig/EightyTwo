@@ -4865,6 +4865,9 @@ input[type=button] {
           transform: translate(-50%, -50%);
   width: 100%;
 }
+#error h1 {
+  color: #fff;
+}
 .gform_wrapper {
   min-width: 100%;
   margin-bottom: 50px !important;
