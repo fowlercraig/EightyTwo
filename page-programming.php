@@ -46,7 +46,7 @@
 			target: 'instafeed--single',
 			limit: 1,
 			clientId: '92edd37c66a44760a6e11f658e4ec473',
-			accessToken: '3031273.6a7999e.02414fda2cce41b5a16a6a46bd20effa',
+			accessToken: '391656327.1677ed0.45bd7ee1eaee4568a524873ea811c49f',
 			resolution: 'standard_resolution',
 			template: '<div class="featured fs-cell fs-lg-third fs-md-half fs-sm-full"><a class="open--image" href="{{image}}"><img src="{{image}}" class="img-responsive" /></a></div><div class="featured-caption fs-cell fs-lg-third fs-md-half fs-sm-full"><span class="title title--md">Posted {{model.created_time}}<br>{{caption}}</span></div>',
 			after: function() {
@@ -89,7 +89,7 @@
 			userId: '391656327',
 			limit: 13,
 			clientId: '92edd37c66a44760a6e11f658e4ec473',
-			accessToken: '3031273.6a7999e.02414fda2cce41b5a16a6a46bd20effa',
+			accessToken: '391656327.1677ed0.45bd7ee1eaee4568a524873ea811c49f',
 			resolution: 'standard_resolution',
 			template: '<div class="fs-cell fs-lg-3 fs-md-2 fs-sm-half"><a class="open--image" title="Posted {{model.created_time}} — {{caption}}" href="{{image}}"><img src="{{image}}" class="img-responsive" /></a><hr class="invisible compact" /></div>',
 			after: function() {
