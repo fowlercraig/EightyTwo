@@ -21,10 +21,10 @@
 	</div>
 	<div class="fs-cell fs-xl-half fs-lg-half fs-md-half fs-sm-3">
 			<div class="fs-row">
-				<select class="fs-cell fs-all-half js-filters">
-					<option>Filter</option>
-					<option value="">All</option>
-					<option value="Arcade Video Game">Arcade Video Game</option>
+				<select class="fs-cell fs-all-half filter-game js-filters">
+					<option disabled>Filter</option>
+					<option value="All">All</option>
+					<option value="Video Game">Video Game</option>
 					<option value="Pinball">Pinball</option>
 				</select>
 				<select class="fs-cell fs-all-half sort-options">

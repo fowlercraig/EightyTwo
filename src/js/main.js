@@ -39,10 +39,14 @@ $(document).ready(function() {
   $filterOptions = $('.js-filters');
 
   $filterOptions.on('change', function() {
-  	var sort = this.value;
-  	$grid.shuffle('shuffle', function($el, shuffle) {
-  		return $el.data('cat').length < 10;
-		});
+    var sort = this.value;
+    if (sort != 'All'){
+      $grid.shuffle('shuffle', function($el, shuffle) {
+        return $el.data('cat') == sort;  
+      });
+    } else {
+      $grid.shuffle( 'shuffle', 'all' );
+    }
   });
 
   filter = function() {

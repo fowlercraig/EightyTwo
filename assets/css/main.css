@@ -4291,7 +4291,7 @@ form textarea--logo {
   form input[type=tel]--logo,
   form input[type=url]--logo,
   form textarea--logo {
-    padding-left: 55px !important;
+    padding-left: 92.5px !important;
   }
 }
 @media screen and (min-width: 980px) {
@@ -4301,7 +4301,7 @@ form textarea--logo {
   form input[type=tel]--logo,
   form input[type=url]--logo,
   form textarea--logo {
-    padding-left: 55px !important;
+    padding-left: 92.5px !important;
   }
 }
 form input[type=text]--logo span,
@@ -4715,14 +4715,14 @@ input[type=button] {
   .btn--logo,
   .button--logo,
   .epm-submit-chimp--logo {
-    padding-left: 55px !important;
+    padding-left: 92.5px !important;
   }
 }
 @media screen and (min-width: 980px) {
   .btn--logo,
   .button--logo,
   .epm-submit-chimp--logo {
-    padding-left: 55px !important;
+    padding-left: 92.5px !important;
   }
 }
 .btn--logo span,
@@ -5230,7 +5230,7 @@ input[type=button] {
   line-height: 30px;
 }
 .header--clone .btn--logo {
-  padding-left: 55px !important;
+  padding-left: 75px !important;
 }
 @media screen and (min-width: 300px) {
   .header--clone #header--logo {
