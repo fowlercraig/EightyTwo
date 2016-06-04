@@ -19,11 +19,11 @@
 
 <div class="fs-row">
 	<div class="fs-cell fs-all-full">
-		<span class="title title--md color--white">Past Posts</span>
+		<div class="hentry__content" style="margin-bottom: 12.5px">
+			<h3 class="color--white">Past Posts</h3>
+		</div>
 	</div>
 </div>
-
-<br>
 
 <div class="fs-row" id="instafeed"></div>
 

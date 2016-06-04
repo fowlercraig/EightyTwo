@@ -53,18 +53,23 @@
     }
 
     .btn--logo {
-      padding-left: 50px + @spaced!important;
+      @media @min {
+        padding-left: @height_nav*.5 + @spaced!important;
+      }
+      @media @tablet {
+        padding-left: 50px + @spaced!important;
+      }
     }
 
-    #header--logo {
+    #header--logo, .btn--hamburg {
       @media @min {
-      height: 30px;
-      line-height: 30px
-    }
-    @media @tablet {
-      height: 60px;
-      line-height: 60px;  
-    }
+        height: 30px;
+        line-height: 30px
+      }
+      @media @tablet {
+        height: 60px;
+        line-height: 60px;  
+      }
     }
 
   }
@@ -168,7 +173,7 @@
       //display: none;
     }
   }
-  &--logo {
+  &--logo, .btn--hamburg{
     @media @min {
       height: 30px;
       line-height: 30px

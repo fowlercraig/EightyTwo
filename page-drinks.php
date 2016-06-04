@@ -27,8 +27,10 @@
 		<?php else: ?>
 		<div class="drinks-menu fs-cell fs-lg-half fs-md-full fs-sm-3">
 		<?php endif; ?>
-			<span class="title title--md color--white"><?php echo $drink['title']; ?></span>
-			<hr class="divider divider--dark">
+			<div class="hentry__content" style="margin:0">
+				<h3 class="color--white"><?php echo $drink['title']; ?></h3>
+			</div>
+			<hr class="divider compact divider--dark">
 			<?php # echo $drink['drinks']; ?>
 			<div class="fs-row">
 				<div class="fs-cell fs-lg-half fs-md-half fs-sm-3"><?php echo $drink['menu_left']; ?></div>

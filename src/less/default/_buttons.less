@@ -107,7 +107,12 @@ input[type=button] {
       padding-left: @height_nav + (@spaced*2.5)!important;
     }
     span {
-      .font_size(24);
+      @media @min {
+        .font_size(19);  
+      }
+      @media @tablet {
+        .font_size(24);  
+      }
       color: @textGray;
       position: absolute;
       bottom: 0;
@@ -128,7 +133,7 @@ input[type=button] {
       left: 0;
       top: 50%;
       margin-top: -5px;
-      width: 1em;
+      width: 100%;
       height: 1px;
       background: @black25;
       box-shadow: 
