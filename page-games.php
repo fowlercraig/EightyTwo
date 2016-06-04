@@ -49,6 +49,8 @@
 <?php 
 	$args =  array(
 		'posts_per_page'	=> -1,
+		'orderby' => 'title',
+		'order'   => 'ASC',
 	); 
 	$query = new WP_Query( $args );
 	$games = $query->get_posts();
