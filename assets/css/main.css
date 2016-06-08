@@ -5181,6 +5181,22 @@ input[type=button] {
 .hero--fixed.scroll-to-fixed-fixed .fs-background-container {
   opacity: .5;
 }
+.carousel_fade .fs-carousel-item {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0s linear, visibility 0s linear;
+  transition: opacity 0s linear, visibility 0s linear;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.carousel_fade .fs-carousel-item.fs-carousel-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
 .modal {
   margin: auto;
   border-radius: 2px;
@@ -5617,6 +5633,10 @@ html {
 .home__hero .title span {
   padding-left: 8px;
   padding-right: 8px;
+}
+.home__hero #instafeed--single {
+  position: relative;
+  z-index: 99;
 }
 .home__hero p {
   color: #999999;

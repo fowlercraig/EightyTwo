@@ -111,4 +111,6 @@ if( $seoTitle == 's' ):
 	<?php endforeach; wp_reset_postdata(); ?>
 </div>	
 
+<?php include locate_template('parts/instafeed.php' ); ?>
+
 <?php get_footer(); ?>
