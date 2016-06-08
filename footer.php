@@ -5,16 +5,20 @@
   <div class="fs-row">
     <div class='fs-cell fs-lg-6 fs-md-6 fs-sm-3 color--white'>
       <span class="btn btn--nav btn__first">&copy; EightyTwo <span class="fs-sm-hide">| Classic Arcade</span> <?php echo date('Y'); ?></span>
+      <!--
       <a target="_blank" href="https://www.facebook.com/eightytwola/" class="btn btn--nav btn__icon ss-social-circle ss-facebook"></a>
       <a target="_blank" href="https://www.instagram.com/EightyTwoLA/" class="btn btn--nav btn__icon ss-social-circle ss-instagram"></a>
       <a target="_blank" href="https://twitter.com/EightyTwoLA" class="btn btn--nav btn__icon ss-social-circle ss-twitter"></a>
+      -->
     </div>
+    <!--
     <div class="fs-cell fs-lg-hide fs-md-6 fs-sm-3">
       <hr class="divider compact bg--white--50">
     </div>
     <div class='fs-cell fs-lg-6 fs-md-6 fs-sm-3 text-right'>
       <a href="<?php echo get_permalink(88); ?>" class="btn btn--nav btn__last">Interested in Private Events?</a>
     </div>
+    -->
   </div>
 </footer>
 

@@ -21,6 +21,7 @@
 	<div class="fs-cell fs-all-full">
 		<div class="hentry__content" style="margin-bottom: 12.5px">
 			<h3 class="color--white">Past Posts</h3>
+			<hr class="compact invisible">
 		</div>
 	</div>
 </div>

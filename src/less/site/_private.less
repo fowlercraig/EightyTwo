@@ -1,9 +1,14 @@
 .private {
   &__policy {
     &-wrapper {
-      background-size: 75% auto;
-      background-repeat: no-repeat;
-      background-position: right top ;
+      @media @min {
+        background-size: 0 0;
+      } 
+      @media @tablet {
+        background-size: 75% auto;
+        background-repeat: no-repeat;
+        background-position: right top ;  
+      }
     }
   }
 }

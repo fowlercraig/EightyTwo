@@ -22,7 +22,7 @@ $home_posts = get_posts( $home_args );
 	<div class="centered centered__bottomer" style="z-index: 50">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full">
-				<h2 class="home__title title title--xl"><a href="<?php the_permalink(); ?>" class="color--white bg--black-90">EightyTwo</a></h2>
+				<h2 class="home__title title title--xl"><a href="<?php echo get_the_permalink(10); ?>" class="color--white bg--black-90">EightyTwo</a></h2>
 			</div>
 		</div>
 	</div>

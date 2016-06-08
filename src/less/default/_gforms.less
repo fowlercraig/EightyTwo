@@ -4,15 +4,16 @@
 		margin-bottom: @spaced*2!important;
 		border: 1px solid @white25;
 		//background: @white;
-		@media @mobile {
+		@media @min {
 			padding: 0;
+			padding-left: 10px;	
 		}
 		@media @tablet {
-			padding: 10px 0px 10px 17px;
+			padding: 10px 0px 10px 10px;
 			box-shadow: 0 1px 4px fade(@black, 20%);
 		}
 		@media @desktop {
-			padding: 10px 0px 10px 20px;
+			padding: 10px 0px 10px 12px;
 		}
 	}
 	&_button {
@@ -31,7 +32,9 @@
 				margin-bottom: 0px!important;
 				.headerFont();
 				color: @gray;
-				letter-spacing: -.5px;
+				@media @tablet {
+					letter-spacing: -.5px;
+				}
 			}
 			&_description {
 				padding-top: 0!important;
@@ -55,20 +58,15 @@
 	}
 }
 
-@media only screen and (min-width: 200px) and (max-width: 768px) {
-
-  .gform_wrapper .gform_body .top_label li.gfield.gf_right_half { 
-    float: left; 
-    clear: left !important;
-    width: 99%;
-    //margin-left: 5px;
-  } 
-
-  .gform_wrapper .gform_body .top_label li.gfield.gf_left_half { 
-    float: left; 
-    clear: left !important;
-    width: 99%;
-    //margin-left: 5px;
-  }
-
+.gf {
+	&_left, &_middle, &_right {
+		&_third {
+			@media @min {
+				width: 100%!important;	
+			}
+			@media @tablet {
+				width: 31.9%!important;	
+			}
+		}
+	}
 }
