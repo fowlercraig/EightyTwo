@@ -4,11 +4,11 @@
       get: 'user',
       userId: '391656327',
       target: 'instafeed--single',
-      limit: 4,
+      limit: 6,
       clientId: '92edd37c66a44760a6e11f658e4ec473',
       accessToken: '391656327.1677ed0.45bd7ee1eaee4568a524873ea811c49f',
       resolution: 'standard_resolution',
-      template: '<div class="fs-cell fs-lg-3 fs-md-2 fs-sm-half"><a class="open--image" title="Posted {{model.created_time}} — {{caption}}" href="{{image}}"><img src="{{image}}" class="img-responsive" /></a><hr class="invisible compact" /></div>',
+      template: '<div class="fs-cell fs-lg-2 fs-md-1 fs-sm-1"><a class="open--image" title="Posted {{model.created_time}} — {{caption}}" href="{{image}}"><img src="{{image}}" class="img-responsive" /></a><hr class="invisible compact" /></div>',
       after: function() {
         $('.open--image').magnificPopup({
           type: 'image',

@@ -96,5 +96,18 @@
   }
   
   &__footer{}
+
+  &__header {
+    &.carousel {
+      .fs-carousel {
+        &-pagination {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          z-index: 40;
+        }
+      }
+    }
+  }
   
 }

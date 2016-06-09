@@ -1194,7 +1194,7 @@
   padding: 0;
   width: 10px;
   height: 10px;
-  background: #333;
+  background: #fff;
   border-radius: 100%;
   margin: 0 3px;
   opacity: 0.5;
@@ -4510,7 +4510,7 @@ select {
   padding-right: 2.5em;
   background: url('/assets/img/iconwhite--down.svg') center right 0.75em no-repeat;
   background-size: 10px auto;
-  min-width: 150px;
+  min-width: 120px;
 }
 select option {
   font-weight: 400!important;
@@ -4982,6 +4982,13 @@ input[type=button] {
   .gf_right_third {
     width: 31.9%!important;
   }
+}
+.gform_wrapper .gfield_date_day,
+.gform_wrapper .gfield_date_month,
+.gform_wrapper .gfield_date_year,
+.gform_wrapper .gfield_time_hour,
+.gform_wrapper .gfield_time_minute {
+  width: 47%!important;
 }
 @-webkit-keyframes fadeIn {
   from {
@@ -5570,11 +5577,22 @@ input[type=button] {
     font-size: 1.25rem;
   }
 }
+.hentry__header.carousel .fs-carousel-pagination {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 40;
+}
 .widget-title {
   margin-bottom: 5px;
 }
 .widget-area .xoxo {
   padding-left: 0;
+}
+#footer {
+  margin-bottom: 0;
+  font-size: 13px;
+  font-size: 0.8125rem;
 }
 #footer a {
   color: #fff;
