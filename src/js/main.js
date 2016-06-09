@@ -81,11 +81,11 @@ $(document).ready(function() {
       opts = {};
 
   // We're given the element wrapped in jQuery
-  if ( sort === 'date-created' ) {
+  if ( sort === 'date' ) {
     opts = {
       reverse: true,
       by: function($el) {
-        return $el.data('date-created');
+        return $el.data('date');
       }
     };
   } else if ( sort === 'title' ) {
