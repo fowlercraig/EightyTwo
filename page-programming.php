@@ -17,6 +17,8 @@
 <hr class="divider divider--dark">
 <div id="instafeed--single-wrapper"><div class="fs-row" id="instafeed--single"></div></div>
 
+<hr class="invisible">
+
 <div class="fs-row">
 	<div class="fs-cell fs-all-full">
 		<div class="hentry__content" style="margin-bottom: 12.5px">
