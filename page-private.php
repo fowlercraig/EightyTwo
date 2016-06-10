@@ -32,11 +32,13 @@ $thumb_url = $thumb_url_array[0];
 			<div class='fs-cell fs-all-full'>
 				<div class="carousel">
 					<?php $images = get_field('gallery'); ?>
+					<?php if($images): ?>
 					<?php foreach($images as $image): ?>
 					<div class="carousel__slide">
 						<img src="<?php echo $image['sizes']['gallery-lg']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>"/>
 					</div>
 					<?php endforeach; ?>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -46,11 +48,13 @@ $thumb_url = $thumb_url_array[0];
 			<div class='fs-cell fs-all-full'>
 				<div class="carousel">
 					<?php $quotes = get_field('quotes'); ?>
+					<?php if($quotes): ?>
 					<?php foreach($quotes as $quote): ?>
 					<div class="carousel__slide">
 						<?php echo $quote['quote']; ?>
 					</div>
 					<?php endforeach; ?>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
