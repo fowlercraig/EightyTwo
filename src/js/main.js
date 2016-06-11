@@ -135,10 +135,10 @@ $(document).ready(function(){
 		currentClass: 'current'
 	});
   if( /Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { } else {
-	 $.stellar({
-      horizontalScrolling: false,
-      //scrollProperty: 'transform'
-      //verticalOffset: 40
-	 });
+    setTimeout(function(){
+  	 $.stellar({
+        horizontalScrolling: false,
+  	 });
+    }, 100);
   }
 });
