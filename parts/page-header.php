@@ -10,12 +10,12 @@ $images = get_field('header_gallery');
 <?php if($images): ?>
 <header class="hentry__header carousel carousel_fade" data-carousel-options='{"single":true, "autoAdvance": true }'>
   <?php foreach($images as $image): ?>
-  <div class="hero hero--sm hero--overlay relative bg--black" style="background-image: url(<?php echo $image['sizes']['large']; ?>);"></div>
+  <div class="hero hero--sm relative bg--black" style="background-image: url(<?php echo $image['sizes']['large']; ?>);"></div>
   <?php endforeach; ?>
 </header>
 <?php else: ?>
 <header class="hentry__header">
-  <div class="hero hero--sm hero--overlay relative bg--black" style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75">
+  <div class="hero hero--sm relative bg--black" style="background-image: url(<?php echo $thumb_url; ?>);" data-stellar-background-ratio="0.75">
     <div class="centered centered__bottom">
       <div class="fs-row">
         <div class='fs-cell fs-xl-8 fs-lg-8 fs-md-6 fs-sm-3 color--white'>
