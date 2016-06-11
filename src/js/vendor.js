@@ -15,4 +15,4 @@
 // @codekit-prepend "../bower_components/jQuery-One-Page-Nav/jquery.nav.js"
 // @codekit-prepend "../bower_components/jquery.stellar/jquery.stellar.min.js"
 // @codekit-prepend "../bower_components/shufflejs/dist/jquery.shuffle.modernizr.js"
-// @codekit-prepend "../bower_components/instafeed/instafeed.js"
+// @codekit-prepend "../bower_components/instafeed.js/instafeed.js"
