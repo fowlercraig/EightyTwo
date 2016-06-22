@@ -8,8 +8,8 @@ $images = get_field('header_gallery');
 ?>
 
 <?php if($images): ?>
-<header class="hentry__header carousel carousel_fade" data-carousel-options='{"single":true, "autoAdvance": true }'>
-  <?php foreach($images as $image): ?>
+<header class="hentry__header carousel carousel_fade" data-carousel-options='{"single":true, "autoAdvance": true, "autoTime": 5000 }'>
+  <?php shuffle($images); foreach($images as $image): ?>
   <div class="hero hero--sm relative bg--black" style="background-image: url(<?php echo $image['sizes']['large']; ?>);"></div>
   <?php endforeach; ?>
 </header>
